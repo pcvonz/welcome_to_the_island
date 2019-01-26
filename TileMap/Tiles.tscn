@@ -63,7 +63,7 @@ _sections_unfolded = [ "Offset" ]
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
-<<<<<<< HEAD
+
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -125,8 +125,6 @@ position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
-=======
->>>>>>> b1bc593e9fb1e1831b8a7b6abab136a0f4f56a49
 __meta__ = {
 "_edit_lock_": true
 }
