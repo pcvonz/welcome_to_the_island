@@ -1,7 +1,75 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://CharacterBase/CharacterBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Amilie_anim_1.gltf" type="PackedScene" id=1]
+[ext_resource path="res://CharacterBase/Model.gd" type="Script" id=2]
 
-[node name="Node2D" instance=ExtResource( 1 )]
+[node name="player" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+character = NodePath("Position3D")
+
+[node name="Position3D" type="Position3D" parent="." index="0"]
+
+[node name="Camera2" type="Camera" parent="Position3D" index="0"]
+
+transform = Transform( 0.998611, 0, -0.0526812, 0.0265981, 0.863185, 0.504187, 0.0454736, -0.504888, 0.861986, 0, 4.54851, 3.7377 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = false
+fov = 70.0
+size = 1.0
+near = 0.05
+far = 100.0
+
+[node name="OmniLight" type="OmniLight" parent="." index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7172, 1.99847 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 16.0
+light_indirect_energy = 15.47
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light" ]
+
+[node name="OmniLight2" type="OmniLight" parent="." index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7172, -1.2986 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 16.0
+light_indirect_energy = 15.47
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light" ]
 
 

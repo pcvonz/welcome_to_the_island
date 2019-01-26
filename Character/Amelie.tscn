@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://CharacterBase/MovingEntity.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Character/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=2]
 
 [node name="Amelie" instance=ExtResource( 1 )]
 
