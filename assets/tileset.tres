@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=2]
+[gd_resource type="TileSet" load_steps=6 format=2]
 
 [ext_resource path="res://assets/02_wall.png" type="Texture" id=1]
 [ext_resource path="res://assets/terrain_grass_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/terrain_beach_1.png" type="Texture" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
@@ -40,4 +41,14 @@ outlines = [ PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 ) ]
 1/navigation_offset = Vector2( 64, 32 )
 1/navigation = SubResource( 1 )
 1/shapes = [  ]
+2/name = "Sprite2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 128, 64 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 64, 32 )
+2/navigation_offset = Vector2( 64, 32 )
+2/navigation = SubResource( 1 )
+2/shapes = [  ]
 

@@ -10,5 +10,5 @@ func _ready():
 	set_process(true)
 
 
-func _process(delta):
-	model.rotation_degrees.y += delta * SPEED
+#func _process(delta):
+#	model.rotation_degrees.y += delta * SPEED
