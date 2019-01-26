@@ -21,7 +21,6 @@ func _go_to_random_pos():
 func _process(delta):
 	if path.size() > 0:
 		var distance_to = self.position.distance_to(path[0])
-		print(distance_to)
 		if self.position.distance_to(path[0]) > 2:
 			var vec_to = path[0] - self.position
 			vec_to = vec_to.normalized() * MAX_SPEED
