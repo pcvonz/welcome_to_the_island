@@ -25,13 +25,3 @@ func _ready():
 	viewport_sprite.texture = viewport.get_texture()
   
 	set_process(true)
-
-
-# Simple frame based animation
-func _process(delta):
-	frame_swtich_timer += delta
-	if (frame_swtich_timer >= FRAME_SWITCH_TIME):
-		frame_swtich_timer -= FRAME_SWITCH_TIME
-		sprite.frame += 1
-	if (sprite.frame > MAX_FRAME_FOR_SPITE):
-		sprite.frame = 0
