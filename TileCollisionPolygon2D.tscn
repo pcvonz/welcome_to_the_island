@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64, 0, 0, 32, -64, 0, 0, -32 )
+_sections_unfolded = [ "Transform" ]
+
+
