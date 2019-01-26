@@ -1,19 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Character/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://CharacterBase/CharacterBase.tscn" type="PackedScene" id=2]
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30, 30 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+MAX_SPEED = 4
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Node2D" parent="." index="0" instance=ExtResource( 2 )]
 
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
 
 
+[editable path="Node2D"]
