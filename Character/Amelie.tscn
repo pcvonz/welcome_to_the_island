@@ -4,7 +4,7 @@
 [ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileCollisionPolygon2D.tscn" type="PackedScene" id=3]
 
-[node name="Amelie" index="0" instance=ExtResource( 1 )]
+[node name="Amelie" instance=ExtResource( 1 )]
 
 [node name="Node2D" parent="." index="0"]
 
@@ -16,15 +16,7 @@ editor/display_folded = true
 
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 2 )]
 
-[node name="Area2D" parent="." index="1"]
-
-position = Vector2( -10, 90 )
-scale = Vector2( 2, 2 )
-_sections_unfolded = [ "Transform" ]
-
 [node name="CollisionPolygon2D2" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( -10, 90 )
 
 
 [editable path="Node2D"]

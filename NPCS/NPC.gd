@@ -3,7 +3,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var map = get_node("../Navigation2D") 
+onready var map = get_node("/root/Node2D/Navigation2D") 
 var path = []
 
 func _ready():
