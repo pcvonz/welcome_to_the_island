@@ -464,7 +464,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control" index="0"]
+[node name="DialogBox" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -499,7 +499,7 @@ size_flags_vertical = 1
 color = Color( 1, 1, 1, 0.657451 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility", "custom_styles" ]
 
-[node name="Name border" type="ColorRect" parent="ColorRect" index="0"]
+[node name="name_border" type="ColorRect" parent="ColorRect" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -517,7 +517,7 @@ size_flags_vertical = 1
 color = Color( 0.206818, 0.980469, 0.527158, 0.795608 )
 _sections_unfolded = [ "Rect" ]
 
-[node name="NameText" type="RichTextLabel" parent="ColorRect/Name border" index="0"]
+[node name="NameText" type="RichTextLabel" parent="ColorRect/name_border" index="0"]
 
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
@@ -546,7 +546,7 @@ tab_size = 6
 text = "
 NAME
 "
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
@@ -719,6 +719,50 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 text = "NO"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
+
+[node name="ContinueRec" type="ColorRect" parent="ColorRect" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 826.0
+margin_top = 155.0
+margin_right = 976.0
+margin_bottom = 185.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.830655, 0.925781, 0.596695, 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="continue" type="Button" parent="ColorRect/ContinueRec" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 149.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "continue"
 flat = true
 align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]

@@ -3,9 +3,9 @@ extends Node
 var npcName;
 var sentences = []
 	
-func _init(npcName, sentences):
-	npcName = npcName
-	sentences= sentences	
+func _init(_npcName, _sentences):
+	npcName = _npcName
+	sentences= _sentences	
 	
 
 func _ready():
@@ -19,7 +19,7 @@ func _ready():
 #	pass
 
 func getName():
-	return name
+	return npcName
 	
 func getSentences():
 	return sentences
