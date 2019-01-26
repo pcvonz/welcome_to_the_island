@@ -18,7 +18,6 @@ outlines = [ PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 ) ]
 
 [node name="Wall" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 200, 50 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -64 )

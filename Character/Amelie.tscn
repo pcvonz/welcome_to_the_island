@@ -7,5 +7,9 @@
 
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 2 )]
 
+[node name="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( -10, 90 )
+
 
 [editable path="Node2D"]
