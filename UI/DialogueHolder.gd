@@ -17,8 +17,8 @@ var selectedDialog
 func _ready():
 	#grab karma class...
 	
-	dialog100 = dialog.new("Bill", ["Hello my name is Bill!", "Can you guess what my favorite food is?", "EGGS!"])
-	dialog101 = dialog.new("Bill", ["Hmmmm.... I wonder what I'm going to do today...", "Any suggestions?"])
+	dialog100 = dialog.new("BILL", ["Hello my name is Bill!", "Can you guess what my favorite food is?", "EGGS!"])
+	dialog101 = dialog.new("BILL", ["Hmmmm.... I wonder what I'm going to do today...", "Any suggestions?"])
 	
 	
 	pass

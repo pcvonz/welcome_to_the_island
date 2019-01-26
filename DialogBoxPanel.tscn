@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/DialogueManager.gd" type="Script" id=1]
-[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=2]
+[ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -9,6 +10,7 @@ render_priority = 0
 
 [sub_resource type="Theme" id=2]
 
+default_font = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 
@@ -70,6 +72,7 @@ _sections_unfolded = [ "Border Width", "Shadow" ]
 
 [sub_resource type="Theme" id=5]
 
+default_font = ExtResource( 2 )
 /colors/ = Color( 0, 0, 0, 1 )
 /colors/color1 = Color( 0.0908203, 0.96875, 0.824715, 1 )
 Button/colors/font_color = Color( 0, 0, 0, 1 )
@@ -528,11 +531,12 @@ anchor_bottom = 0.0
 margin_right = 140.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -542,7 +546,7 @@ NAME
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
-tab_size = 6
+tab_size = 1
 text = "
 NAME
 "
@@ -550,7 +554,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" index="1"]
 
@@ -581,9 +585,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 22.0
-margin_top = 25.0
+margin_top = 24.0
 margin_right = 1008.0
-margin_bottom = 154.0
+margin_bottom = 153.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -629,11 +633,11 @@ Sdfasdfasdfasdfasjdf lksjdflkja sdlfikja
 
 
 "
-scroll_active = true
+scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="Option1Rec" type="ColorRect" parent="ColorRect" index="3"]
 
@@ -769,6 +773,6 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material",
 
 [node name="DialogHolder" type="Node" parent="." index="1"]
 
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 
