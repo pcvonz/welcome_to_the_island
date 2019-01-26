@@ -3,7 +3,7 @@
 [ext_resource path="res://TileMap/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset.tres" type="TileSet" id=2]
 
-[node name="Navigation2D" type="Navigation2D"]
+[node name="Navigation2D" type="Navigation2D" index="0"]
 
 script = ExtResource( 1 )
 

@@ -10,4 +10,5 @@ var down = Vector2(0, 1)
 var up = Vector2(0, -1)
 const SPEED = 10
 export var MAX_SPEED = 4
-onready var character = get_node("Node2D/Viewport/player/Armature")
+onready var player = get_node("Node2D/Viewport/player")
+#onready var model_root = player.get_node('model').get_node(player.get_character)
