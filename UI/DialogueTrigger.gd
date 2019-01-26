@@ -6,9 +6,16 @@ extends Node
 var diagHolder
 var diagManager
 
+
+
 func _ready():
-	diagHolder = $"DialogHolder"
-	diagManager = $"DialogManager"
+	#diagHolder = $"DialogBox/DialogHolder"
+	var diagManager = get_node("/root/Node/DialogBox")
+	var diagHolder = get_node("/root/Node/DialogBox/DialogHolder")
+	#var targetDialog = self.connect("pressed", diagHolder, "retrieveDialog", ["dialogue"])
+	
+	self.connect("pressed", diagManager, "startDialogue" )
+	
 	pass
 
 #func _process(delta):
@@ -16,5 +23,3 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-func dialogTriggered():
-	diagManager.startDialog(diagHolder.retrieveDialog)

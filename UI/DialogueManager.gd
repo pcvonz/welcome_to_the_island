@@ -6,9 +6,12 @@ var nameText
 var sentenceText
 var counter
 
-var dialogBox
+var continueButton
+
 
 var sentenceArray = []
+var dialogHolder 
+
 
 # var b = "textvar"
 
@@ -16,32 +19,40 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	
-	nameText = $"ColorRect/Name border/NameText"
+	nameText = get_node("ColorRect/name_border/NameText")
 	sentenceText = get_node("ColorRect/SentenceText")
+	continueButton = get_node("ColorRect/ContinueRec/continue")
+	continueButton.connect("button_down", self, "getNextSentence")
+	
+	dialogHolder = get_node("DialogHolder")
 	
 	hide()
 	
 	
 	pass
 	
-func startDialogue(dialog):
+func startDialogue():
+	var dialog = dialogHolder.retrieveDialog()
 	sentenceArray.clear()
 	counter = 0
-	nameText.bbcode_text = "[center]" + dialog.getName() + "[/center]"
+	var name = dialog.getName()
+	nameText.bbcode_text = "[center] " + name + " [/center]"
 	sentenceArray = dialog.getSentences()
 	getNextSentence()
 	show()
 	
 func getNextSentence():
 	if counter < sentenceArray.size():
-		sentenceText.bbcode_text = "[center]" + sentenceArray.index(counter) + "[/center]"
-		counter += counter
+		sentenceText.bbcode_text = "[center] " + sentenceArray[counter] + " [/center]"
+		counter = counter +1
 	else:
 		endDialogue()
 		
 		
 func endDialogue():
 	hide()
+	
+
 
 	
 	
