@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/02_wall.png" type="Texture" id=1]
-[ext_resource path="res://assets/terrain_grass_1.png" type="Texture" id=2]
-[ext_resource path="res://assets/terrain_beach_1.png" type="Texture" id=3]
-[ext_resource path="res://assets/terrain_beach_2.png" type="Texture" id=4]
-[ext_resource path="res://assets/terrain_beach_3.png" type="Texture" id=5]
-[ext_resource path="res://assets/terrain_beach_4.png" type="Texture" id=6]
-[ext_resource path="res://assets/terrain_flowers_1.png" type="Texture" id=7]
+[ext_resource path="res://TileCollisionPolygon2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/terrain_grass_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/terrain_beach_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/terrain_beach_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/terrain_beach_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/terrain_beach_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/terrain_flowers_1.png" type="Texture" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -14,11 +15,10 @@ vertices = PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 ) ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Wall" type="Sprite" parent="." index="0"]
 
-editor/display_folded = true
 position = Vector2( 200, 50 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -64 )
@@ -34,31 +34,29 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 0, -70 )
-build_mode = 0
-polygon = PoolVector2Array( -64.3424, -10.2336, -0.320251, -41.8968, 64.3504, -9.66186, 64.3504, 38.303, -0.0235291, 70.3322, -64.713, 38.1452 )
+position = Vector2( 0, -34 )
 
-[node name="terrain_grass_1" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 64, 32 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_grass_1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite" index="0"]
 
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="terrain_beach_1" type="Sprite" parent="." index="2"]
+[node name="Sprite2" type="Sprite" parent="." index="2"]
 
 position = Vector2( 64, 96 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite2" index="0"]
 
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
@@ -71,7 +69,7 @@ __meta__ = {
 [node name="terrain_beach_2" type="Sprite" parent="." index="3"]
 
 position = Vector2( 208, 176 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_2" index="0"]
 
@@ -86,7 +84,7 @@ __meta__ = {
 [node name="terrain_beach_3" type="Sprite" parent="." index="4"]
 
 position = Vector2( 136, 240 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_3" index="0"]
 
@@ -101,7 +99,7 @@ __meta__ = {
 [node name="terrain_beach_4" type="Sprite" parent="." index="5"]
 
 position = Vector2( -16, 200 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_4" index="0"]
 
@@ -116,7 +114,7 @@ __meta__ = {
 [node name="terrain_flowers_1" type="Sprite" parent="." index="6"]
 
 position = Vector2( -112, 136 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_flowers_1" index="0"]
 

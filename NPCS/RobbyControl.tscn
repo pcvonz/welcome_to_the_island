@@ -18,6 +18,10 @@ character = NodePath("Armature")
 
 current = true
 
+[node name="Timer" parent="Node2D" index="3"]
+
+autostart = true
+
 
 [editable path="Node2D"]
 [editable path="Node2D/Viewport/player"]

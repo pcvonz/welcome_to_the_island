@@ -28,7 +28,6 @@ func _process(delta):
 		direction += down
 	move_character(direction.normalized()*MAX_SPEED, rotate)
 	if self.position == self.prev_position:
-		print("STOP")
 		anim.stop()
 		anim.seek(0)
 	prev_position = self.position
