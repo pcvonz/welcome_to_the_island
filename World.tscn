@@ -16,4 +16,6 @@ script = ExtResource( 3 )
 
 [node name="Robby" parent="." index="2" instance=ExtResource( 4 )]
 
+MAX_SPEED = 1
+
 

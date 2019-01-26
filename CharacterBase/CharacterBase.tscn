@@ -38,4 +38,11 @@ _sections_unfolded = [ "Physics", "Render Target", "Rendering" ]
 
 [node name="Viewport_Sprite" type="Sprite" parent="." index="2"]
 
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 
