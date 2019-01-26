@@ -36,9 +36,7 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 0, -70 )
-build_mode = 0
-polygon = PoolVector2Array( -60, -20, 0, -50, 70, -20, 70, 30, 0, 70, -60, 40 )
+position = Vector2( 0, -34 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
@@ -63,7 +61,6 @@ _sections_unfolded = [ "Offset" ]
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
-
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
