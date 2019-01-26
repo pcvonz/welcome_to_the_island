@@ -1,1 +1,34 @@
-{"name":"Script"}
+{
+    "npcName": "NPC1",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "Dialog1",
+            "Responses":
+            [
+                {
+                    "Response": "Yes",
+                    "NextSentence": "ID2"
+                },
+                {
+                    "Response": "No",
+                    "NextSentence":"ID2"
+                }
+            ]
+        },
+        {
+            "ID": "ID2",
+            "Sentence": "Dialog2",
+            "Responses":
+            [
+                {
+                    "Response": "Totally"
+                },
+                {
+                    "Response": "No Way"
+                }
+            ]
+        }
+    ]
+}
