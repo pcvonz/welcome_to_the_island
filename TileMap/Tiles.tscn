@@ -36,31 +36,34 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" parent="Wall/StaticBody2D" index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 0, -34 )
+position = Vector2( 0, -70 )
+build_mode = 0
+polygon = PoolVector2Array( -60, -20, 0, -50, 70, -20, 70, 30, 0, 70, -60, 40 )
 
-[node name="terrain_grass_1" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
 position = Vector2( 64, 32 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_grass_1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite" index="0"]
 
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="terrain_beach_1" type="Sprite" parent="." index="2"]
+[node name="Sprite2" type="Sprite" parent="." index="2"]
 
 position = Vector2( 64, 96 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Offset" ]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite2" index="0"]
 
 position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
+<<<<<<< HEAD
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
@@ -122,6 +125,8 @@ position = Vector2( 0, 40 )
 navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
+=======
+>>>>>>> b1bc593e9fb1e1831b8a7b6abab136a0f4f56a49
 __meta__ = {
 "_edit_lock_": true
 }
