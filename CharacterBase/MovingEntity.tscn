@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://CharacterBase/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://CharacterBase/MovingEntity.gd" type="Script" id=1]
 [ext_resource path="res://CharacterBase/CharacterBase.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="MovingEntity" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
