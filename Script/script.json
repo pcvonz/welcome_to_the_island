@@ -4,31 +4,85 @@
     [
         {
             "ID": "ID1",
-            "Sentence": "Dialog1",
-            "Responses":
+            "Sentence": "Oh! Hey! You’re alive, oh I mean, wow! that must have been a rough trip! Your boat just came in on a giant wave, and…. Oh where are my manners! ::Under breath:: ‘okay friendly smile, wave hand, and welcome her, come on, you can do this…’ WELCOME TO THE ISLAND, I HOPE YOU ENJOY YOUR TIME HERE! ARE YOU HUNGRY?! I CAN GET YOU SOME FOOD!’",
+            "Action1": "[Amilie and Sunbreeze share an awkward look.]",
+			"Responses":
             [
                 {
-                    "Response": "Yes",
+                    "Response": "Continue...",
                     "NextSentence": "ID2"
-                },
-                {
-                    "Response": "No",
-                    "NextSentence":"ID2"
                 }
             ]
         },
+		
         {
             "ID": "ID2",
-            "Sentence": "Dialog2",
+            "Sentence": "Just come with me…",
             "Responses":
             [
                 {
-                    "Response": "Totally"
+                    "Response1": "Trust",
+					"NextSentence": "ID2A"
                 },
                 {
-                    "Response": "No Way"
+                    "Response2": "Don't Trust",
+					"NextSentence": "ID2B"
                 }
             ]
-        }
+        },
+		
+		{
+			"ID": "ID2A",
+			"Sentence": "Let’s go! Onwards to a great adventure!",
+			"Action1": "[You go with Sunbreeze and she takes you to a place serving pineapple salad with a nutty sauce]",
+			"Responses":
+			[
+				{
+					"Response1": "Continue...",
+					"NextSentence": "ID3"
+				}
+			]
+		},
+		
+		{
+			"ID": "ID2B",
+			"Action1": "[You think about it and move towards your boat which looks it’s in terrible condition, but logically you should not trust strangers especially with what happened in your last island. And this person is just has a serious weirdo vibe]",
+			"Sentence": "WAIT! Okay… sorry… sorry… that was pretty awkward…. You just look like you’ve had a rough day, and I’m just trying to help. Please get yourself something to eat before you go back out there or you’ll starve to death….",
+			"Action2": "[You go with Sunbreeze and she takes you to her home where she gives you some sun baked potatoes]",
+			"Responses":
+			[
+				{
+					"Response1": "Continue...",
+					"NextSentence": "ID3"
+				}
+			]
+		},
+		
+		{
+			"ID": "ID3",
+			"Sentence": "So welcome to the island. Please feel free to walk around and meet the neighbors! I would show you around but it’s about time to harvest the sun apples. Remember a sun apple a day keeps the sunshine all day… in your heart!",
+			"Action1": "Amelie and Sunbreeze share another awkward look",
+			"Responses":
+			[
+				{
+					"Response1": "Continue...",
+					"NextSentence": "ID4"
+				}
+			]
+		},
+		
+		{
+			"ID": "ID4",
+			"Sentence": "BYE!!!",
+			"Action1": "Sunbreeze scampers away and trips mid way. She gets up, brushes herself off and scampers the rest of the way.",
+			"Responses":
+			[
+				{
+					"Response1: "Continue...",
+				}
+			]
+
+		}
+		
     ]
 }
