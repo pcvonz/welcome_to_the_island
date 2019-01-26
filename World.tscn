@@ -13,7 +13,7 @@ position = Vector2( -1.50732, 0 )
 
 [node name="Amelie" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 398.003, 293.559 )
+position = Vector2( 397.003, 293.559 )
 script = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Amelie" index="2"]
