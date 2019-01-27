@@ -31,8 +31,7 @@ func _go_to_player_pos():
 	var amelie_direction = amelie.current_direction
 	var behind_direction = -amelie_direction
 	
-	var how_far_behind = 100
-	var behind_pos = pos + behind_direction * how_far_behind
+	var behind_pos = pos + Vector2(sign(behind_direction.x) * (128 + 64 + 5) , sign(behind_direction.y) * (64 + 32 + 5))
 	
 	path = map.get_simple_path(self.position, behind_pos)
 	
