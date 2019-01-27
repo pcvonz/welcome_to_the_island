@@ -2,7 +2,7 @@
 
 [ext_resource path="res://CutScenes/Beginning.gd" type="Script" id=1]
 [ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sound/beginingeffect.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Sound/goodEndSong.ogg" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -77,7 +77,7 @@ tracks/4/keys = {
 "values": [  ]
 }
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -90,7 +90,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-Scene = "res://World.tscn"
+Scene = "res://CutScenes/WorldEnd.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -175,7 +175,7 @@ _sections_unfolded = [ "Playback Options" ]
 stream = ExtResource( 3 )
 volume_db = 1.0
 pitch_scale = 1.0
-autoplay = false
+autoplay = true
 mix_target = 1
 bus = "Master"
 

@@ -80,7 +80,7 @@ tracks/4/keys = {
 "values": [  ]
 }
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -93,7 +93,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-Scene = "res://World.tscn"
+Scene = "res://Menu.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
