@@ -61,7 +61,7 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
 		get_tree().paused = true
-#		get_node('/root/Node2D/CanvasLayer/Node/Trigger').hide()
+		get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(body.npc_name)
 		
 		
 		

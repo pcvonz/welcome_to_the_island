@@ -7,6 +7,8 @@ onready var map = get_node("/root/Node2D/Navigation2D")
 var path = []
 export var npc_func = "_go_to_random_pos"
 
+export var npc_name = 'NPC1'
+
 func _ready():
 	$Node2D/Timer.connect("timeout", self, npc_func)
 
