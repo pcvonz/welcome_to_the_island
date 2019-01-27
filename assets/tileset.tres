@@ -4,8 +4,8 @@
 [ext_resource path="res://assets/terrain_grass_1.png" type="Texture" id=2]
 [ext_resource path="res://assets/terrain_beach_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/terrain_beach_2.png" type="Texture" id=4]
-[ext_resource path="res://assets/terrain_beach_3.png" type="Texture" id=5]
-[ext_resource path="res://assets/terrain_beach_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/terrain_beach_4.png" type="Texture" id=5]
+[ext_resource path="res://assets/terrain_beach_3.png" type="Texture" id=6]
 [ext_resource path="res://assets/terrain_flowers_1.png" type="Texture" id=7]
 [ext_resource path="res://assets/terrain_water_1.png" type="Texture" id=8]
 
@@ -78,7 +78,7 @@ points = PoolVector2Array( 0, 32, -64, 0, 0, -32, 64, 0 )
 3/navigation = SubResource( 3 )
 3/shapes = [  ]
 4/name = "terrain_beach_3"
-4/texture = ExtResource( 5 )
+4/texture = ExtResource( 6 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 128, 64 )
@@ -88,7 +88,7 @@ points = PoolVector2Array( 0, 32, -64, 0, 0, -32, 64, 0 )
 4/navigation = SubResource( 3 )
 4/shapes = [  ]
 5/name = "terrain_beach_4"
-5/texture = ExtResource( 6 )
+5/texture = ExtResource( 5 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 128, 64 )
@@ -141,4 +141,44 @@ points = PoolVector2Array( 0, 32, -64, 0, 0, -32, 64, 0 )
 "shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 64, 32 )
 } ]
+10/name = "Sprite3"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 128, 64 )
+10/is_autotile = false
+10/occluder_offset = Vector2( 64, 32 )
+10/navigation_offset = Vector2( 64, 32 )
+10/navigation = SubResource( 3 )
+10/shapes = [  ]
+11/name = "Sprite4"
+11/texture = ExtResource( 3 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 128, 64 )
+11/is_autotile = false
+11/occluder_offset = Vector2( 64, 32 )
+11/navigation_offset = Vector2( 64, 32 )
+11/navigation = SubResource( 3 )
+11/shapes = [  ]
+12/name = "terrain_beach_5"
+12/texture = ExtResource( 4 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 128, 64 )
+12/is_autotile = false
+12/occluder_offset = Vector2( 64, 32 )
+12/navigation_offset = Vector2( 64, 32 )
+12/navigation = SubResource( 3 )
+12/shapes = [  ]
+13/name = "terrain_beach_6"
+13/texture = ExtResource( 5 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 128, 64 )
+13/is_autotile = false
+13/occluder_offset = Vector2( 64, 32 )
+13/navigation_offset = Vector2( 64, 32 )
+13/navigation = SubResource( 3 )
+13/shapes = [  ]
 

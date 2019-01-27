@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/terrain_flowers_1.png" type="Texture" id=6]
 [ext_resource path="res://assets/terrain_water_1.png" type="Texture" id=7]
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=3]
 
 vertices = PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -25,7 +25,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 
 [node name="Sprite2" type="Sprite" parent="." index="1"]
@@ -37,14 +37,48 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite2" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain_beach_2" type="Sprite" parent="." index="2"]
+[node name="Sprite3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 312, 64 )
+texture = ExtResource( 2 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite3" index="0"]
+
+position = Vector2( 0, 40 )
+navpoly = SubResource( 3 )
+enabled = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 504, 64 )
+texture = ExtResource( 2 )
+flip_v = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite4" index="0"]
+
+position = Vector2( 0, 40 )
+navpoly = SubResource( 3 )
+enabled = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="terrain_beach_2" type="Sprite" parent="." index="4"]
 
 position = Vector2( 208, 176 )
 texture = ExtResource( 3 )
@@ -52,14 +86,31 @@ texture = ExtResource( 3 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_2" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain_beach_3" type="Sprite" parent="." index="3"]
+[node name="terrain_beach_5" type="Sprite" parent="." index="5"]
+
+position = Vector2( 448, 224 )
+texture = ExtResource( 3 )
+flip_v = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_5" index="0"]
+
+position = Vector2( 0, 40 )
+navpoly = SubResource( 3 )
+enabled = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="terrain_beach_3" type="Sprite" parent="." index="6"]
 
 position = Vector2( 136, 240 )
 texture = ExtResource( 4 )
@@ -67,14 +118,14 @@ texture = ExtResource( 4 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_3" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain_beach_4" type="Sprite" parent="." index="4"]
+[node name="terrain_beach_4" type="Sprite" parent="." index="7"]
 
 position = Vector2( -16, 200 )
 texture = ExtResource( 5 )
@@ -82,14 +133,31 @@ texture = ExtResource( 5 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_4" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="terrain_flowers_1" type="Sprite" parent="." index="5"]
+[node name="terrain_beach_6" type="Sprite" parent="." index="8"]
+
+position = Vector2( -48, 352 )
+texture = ExtResource( 5 )
+flip_v = true
+_sections_unfolded = [ "Offset" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_6" index="0"]
+
+position = Vector2( 0, 40 )
+navpoly = SubResource( 3 )
+enabled = true
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="terrain_flowers_1" type="Sprite" parent="." index="9"]
 
 position = Vector2( -112, 136 )
 texture = ExtResource( 6 )
@@ -97,14 +165,14 @@ texture = ExtResource( 6 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_flowers_1" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="water" type="Sprite" parent="." index="6"]
+[node name="water" type="Sprite" parent="." index="10"]
 
 position = Vector2( -192, 216 )
 texture = ExtResource( 7 )

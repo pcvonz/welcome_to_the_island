@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://TileMap/Walls/Wall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/terrain_wall_2.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/palmtree_render_1.png" type="Texture" id=4]
 [ext_resource path="res://assets/palmtree_render_2.png" type="Texture" id=5]
 [ext_resource path="res://assets/palmtree_render_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/boat_render.png" type="Texture" id=7]
+[ext_resource path="res://assets/house_niceperson.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -107,7 +109,7 @@ position = Vector2( 64, 24 )
 build_mode = 0
 polygon = PoolVector2Array( -8, 32, -48, 0, 0, -32, 48, 0 )
 
-[node name="Sprite5" type="Sprite" parent="." index="5"]
+[node name="tree" type="Sprite" parent="." index="5"]
 
 position = Vector2( 128, 360 )
 texture = ExtResource( 6 )
@@ -115,7 +117,7 @@ centered = false
 offset = Vector2( -180, -220 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite5" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="tree" index="0"]
 
 position = Vector2( 16, -16 )
 input_pickable = false
@@ -127,11 +129,57 @@ friction = 1.0
 bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite5/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="tree/StaticBody2D" index="0"]
 
 position = Vector2( 48, 24 )
 build_mode = 0
 polygon = PoolVector2Array( -8, 32, -48, 0, 0, -32, 48, 0 )
+
+[node name="boat_render" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1888, 1032 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="boat_render" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boat_render/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -72, 32, -8, 40, 56, 24, 24, -16, -48, 24 )
+
+[node name="house" type="Sprite" parent="." index="7"]
+
+position = Vector2( 1040, 1144 )
+texture = ExtResource( 8 )
+centered = false
+offset = Vector2( -200, -400 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house" index="0"]
+
+position = Vector2( 16, -16 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="house/StaticBody2D" index="0"]
+
+position = Vector2( 48, 24 )
+build_mode = 0
+polygon = PoolVector2Array( 0, 160, -248, 16, 120, -152, 328, 16 )
 
 
 [editable path="Wall"]
