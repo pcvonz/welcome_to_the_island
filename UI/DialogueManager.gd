@@ -47,9 +47,11 @@ func startDialogue(name):
 	currentNPC = name
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
-		get_tree().paused = false
-#		if dialogHolder.isLastConversation():
+		if dialogHolder.isLastConversation() && currentNPC != "Amelie":
+			startDialogue("Amelie")
+			return
 #			get_node("/root/scene/").goto_scene(goodScene)
+		get_tree().paused = false
 		hide()
 		return
 	
