@@ -145,7 +145,7 @@
                     }
                 ]
 
-            },
+            }
             
         ]
     },
@@ -157,10 +157,12 @@
                 "ID": "ID1",
                 "Sentence": "Stop right there or prepared to be slimed!",
                 "Responses":
-                {
-                    "Response":"Continue...",
-                    "NextSentence":"ID2"
-                }
+                [ 
+                    {
+                        "Response":"Continue...",
+                        "NextSentence":"ID2"
+                    } 
+                ]
             },
             {
                 "ID":"ID2",
