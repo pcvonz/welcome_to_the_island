@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Navigation2D" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -51,6 +51,19 @@ MAX_SPEED = 200
 [node name="Robby2" parent="Walls" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 267.032, 185.893 )
+MAX_SPEED = 2
+
+[node name="Robby3" parent="Walls" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 117.39, 49.8551 )
+MAX_SPEED = 2
+npc_name = "NPC2"
+
+[node name="Robby4" parent="Walls" index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 552.712, 72.9815 )
+MAX_SPEED = 2
+npc_name = "NPC3"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
@@ -82,3 +95,4 @@ visible = false
 color = Color( 0, 0, 0, 1 )
 
 
+[editable path="CanvasLayer/DialogBox"]

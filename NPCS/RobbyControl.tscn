@@ -9,6 +9,7 @@
 
 script = ExtResource( 2 )
 npc_func = "_go_to_random_pos"
+npc_name = "NPC1"
 
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
 
