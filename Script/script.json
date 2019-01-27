@@ -664,5 +664,87 @@
             ]
         }
     ]
+},
+{
+    "npcName": "Sign",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "[An old sign. The writing is still readable.]",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue..."
+                    "NextSentence": "ID2"
+                } 
+            ]
+        },
+        {
+            "ID": "ID2",
+            "Sentence": "*GATHER RESOURCES! BUILD A GREAT HOME!*",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue..."
+                } 
+            ]
+        },
+         {
+            "ID": "ID3",
+            "Sentence": "[You have enough parts to build a house and stay on the island with your new friends! Would you like to build one?]",
+            "Responses":
+            [ 
+                {
+                    "Response":"Yes!"
+                } ,
+                {
+                    "Response":"No."
+                }
+            ]
+        }
+    ]
+},
+{
+    "npcName": "Boat",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "[The boat has been destroyed from sailing on rough seas. It might still be repairable.]",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue..."
+                    "NextSentence":"ID2"
+                } 
+            ]
+        },
+        {
+            "ID": "ID2",
+            "Sentence": "[The boat has been destroyed from sailing on rough seas. It might still be repairable.]",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue..."
+                } 
+            ]
+        },
+         {
+            "ID": "ID3",
+            "Sentence": "[You have enough parts to repair the boat and sail away from the island! Would you like to repair it and set sail?]",
+            "Responses":
+            [ 
+                {
+                    "Response":"Yes!"
+                },
+                {
+                    "Response":"No."
+                }
+                
+            ]
+        }
+        
+    ]
 }
 ]
