@@ -16,15 +16,6 @@ editor/display_folded = true
 
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 2 )]
 
-[node name="Area2D" parent="." index="1"]
-
-position = Vector2( -10, 90 )
-scale = Vector2( 2, 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionPolygon2D2" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( -10, 90 )
-
+[node name="CollisionPolygon2D2" parent="." index="2" instance=ExtResource( 4 )]
 
 [editable path="Node2D"]
