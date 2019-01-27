@@ -29,9 +29,9 @@ func on_area_exited(area):
 	body.get_node("highlight").hide()
 	body = null
 
-func move_character(speed, rotation):
+func move_character(speed):
 	move_and_slide(speed)
-	player.get_node("Position3D").rotation_degrees.y = rotation
+	player.get_node("Position3D").rotation_degrees.y = rotate
 	if not anim.is_playing():
 		anim.play('Armature|mixamo.com|Layer0')
 
@@ -39,22 +39,21 @@ func _process(delta):
 	var direction = Vector2(0, 0)
 	if Input.is_action_pressed("ui_left"):
 		direction += left
-		rotate = 90
 	if Input.is_action_pressed("ui_right"):
-		rotate = -90
 		direction += right
 	if Input.is_action_pressed("ui_up"):
-		rotate = 180
 		direction += up
 	if Input.is_action_pressed("ui_down"):
-		rotate = 0
 		direction += down
 	
-	var diagonal_angle = atan(1/2.0)
+	var diagonal_angle = atan(0.5)
 	if direction.x != 0 and direction.y != 0:
 		direction = Vector2(sign(direction.x) * cos(diagonal_angle), sign(direction.y) * sin(diagonal_angle))
-		
-	move_character(direction.normalized()*MAX_SPEED, rotate)
+	
+	if direction.length() > 0:	
+		rotate = rad2deg(down.angle_to(direction)) 
+
+	move_character(direction.normalized()*MAX_SPEED)
 	if self.position == self.prev_position:
 		anim.stop()
 		anim.seek(0)
