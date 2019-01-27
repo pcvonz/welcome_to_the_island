@@ -10,26 +10,25 @@ var night
 var dusk
 var day
 var dawn
-
-
+var canvasModulate
+var storm 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	#github please work
 	hourLabel = get_node("ColorRect/timeLabel")
 	stringLabel = get_node("ColorRect/stringText")
-	canvasModulate = get_node("ColorModulate")
+	canvasModulate = get_node("/root/Node2D/CanvasModulate")
 	
-	var night = Color(132.93, 135.91, 155.39)
-	var dusk = Color(207.19, 168.24, 118.16)
-	var day = Color (255, 255, 255)
-	var dawn = Color(207.19, 128.59, 118.16)
-	var storm = Color(124.55, 0 , 164.36)
+	night = Color("#84879B")
+	dusk = Color("#CFA876")
+	day = Color (1, 1, 1)
+	dawn = Color("#CF8076")
+	storm = Color("#7C00A4")
 	
 	hoursRemaining = 48
 	resetTimer()
-	pass
-	
+
 func resetTimer():
 	set_wait_time(1)
 	start()
@@ -47,14 +46,14 @@ func onTimeoutComplete():
 	if hoursRemaining ==1:
 		stringLabel.set_text("hour remaining")
 	#below changes colors at certain points
-	if hoursRemaining == 42 || 18:
-		canvasModulate.color(dusk)
-	if hoursRemaining == 36 || 12:
-		canvasModulate.color(night)
-	if hoursRemaining == 30 || 6:
-		canvasModulate.color(dawn)
+	if hoursRemaining == 42 or hoursRemaining == 18:
+		canvasModulate.color = dusk
+	if hoursRemaining == 36 or hoursRemaining == 12:
+		canvasModulate.color = night
+	if hoursRemaining == 30 or hoursRemaining == 6:
+		canvasModulate.color = dawn
 	if hoursRemaining == 3:
-		canvasModulate.color(storm)
+		canvasModulate.color = storm
 	
 	
 	

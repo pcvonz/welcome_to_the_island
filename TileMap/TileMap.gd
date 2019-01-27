@@ -5,6 +5,4 @@ extends Navigation2D
 # var b = "textvar"
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	get_node("../CanvasModulate").color = Color(.7, .6, .3)

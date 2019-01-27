@@ -106,7 +106,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Transmission" ]
 
-[node name="player" index="0" instance=ExtResource( 1 )]
+[node name="player" instance=ExtResource( 1 )]
 
 [node name="Position3D" type="Position3D" parent="." index="1"]
 
