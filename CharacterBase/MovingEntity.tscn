@@ -4,7 +4,7 @@
 [ext_resource path="res://CharacterBase/CharacterBase.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileCollisionPolygon2D.tscn" type="PackedScene" id=3]
 
-[node name="MovingEntity" type="KinematicBody2D" index="0"]
+[node name="MovingEntity" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
