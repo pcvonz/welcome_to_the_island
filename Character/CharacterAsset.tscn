@@ -12,7 +12,7 @@ character = NodePath("Position3D")
 
 [node name="Camera2" type="Camera" parent="Position3D" index="0"]
 
-transform = Transform( 0.998611, 0, -0.0526812, 0.0265981, 0.863185, 0.504187, 0.0454736, -0.504888, 0.861986, 0, 4.54851, 3.7377 )
+transform = Transform( 1, 0, 0, 0, 0.766045, 0.642788, 0, -0.642788, 0.766044, 0, 4.42005, 4.331 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -25,10 +25,11 @@ fov = 70.0
 size = 1.0
 near = 0.05
 far = 100.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="OmniLight" type="OmniLight" parent="." index="9"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7172, 1.99847 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04246, 2.73262 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 16.0
@@ -51,7 +52,30 @@ _sections_unfolded = [ "Light" ]
 
 [node name="OmniLight2" type="OmniLight" parent="." index="10"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.7172, -1.2986 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.09662, -3.08435 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 16.0
+light_indirect_energy = 15.47
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light" ]
+
+[node name="OmniLight3" type="OmniLight" parent="." index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66822, -0.300862 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 16.0
