@@ -27,7 +27,9 @@ animations = [ {
 "speed": 16.0
 } ]
 
-[node name="Robby" instance=ExtResource( 1 )]
+[node name="Robby" groups=[
+"npc",
+] instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 npc_func = "_go_to_random_pos"
@@ -42,7 +44,7 @@ autostart = true
 visible = false
 frames = SubResource( 1 )
 animation = "default"
-frame = 14
+frame = 13
 playing = true
 
 
