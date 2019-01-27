@@ -467,7 +467,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control"]
+[node name="DialogBox" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -774,6 +774,5 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material",
 [node name="DialogHolder" type="Node" parent="." index="1"]
 
 script = ExtResource( 3 )
-scriptFile = "script/script.json"
 
 
