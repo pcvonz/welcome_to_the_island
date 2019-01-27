@@ -1,13 +1,26 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/DialogueManager.gd" type="Script" id=1]
 [ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
-[ext_resource path="res://UI/DialogueTheme.tres" type="Theme" id=3]
+[ext_resource path="res://UI/Fonts/Neucha.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 20
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -464,7 +477,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control"]
+[node name="DialogBox" type="Control" index="0"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -578,9 +591,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 22.0
-margin_top = 24.0
+margin_top = 23.0
 margin_right = 1008.0
-margin_bottom = 143.0
+margin_bottom = 142.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -588,7 +601,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 size_flags_stretch_ratio = 8.0
-theme = ExtResource( 3 )
+theme = SubResource( 6 )
 bbcode_enabled = true
 bbcode_text = "[center]sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
 asdfasdflkajsd f
