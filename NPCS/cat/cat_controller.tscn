@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://NPCS/NpcBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NPCS/cat/cat.tscn" type="PackedScene" id=2]
+
+[node name="cat" instance=ExtResource( 1 )]
+
+npc_func = "_go_to_player_pos"
+
+[node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 2 )]
+
+
+[editable path="Node2D"]
