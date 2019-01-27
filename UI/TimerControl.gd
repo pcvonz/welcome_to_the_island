@@ -44,8 +44,8 @@ func resetTimer():
 
 func onTimeoutComplete():
 	#also there can be a way to change the color of the day/ night cycle. 
-	hoursRemaining = hoursRemaining - 1
-	hourLabel.set_text( str(hoursRemaining))
+	hoursRemaining = hoursRemaining - 0.2
+	hourLabel.set_text( str(int(hoursRemaining)))
 	if hoursRemaining ==1:
 		stringLabel.set_text("hour remaining")
 	#below changes colors at certain points
