@@ -3,6 +3,8 @@ extends Timer
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
+export(String, FILE) var Scene
+
 var hoursRemaining
 var hourLabel
 var stringLabel
@@ -65,7 +67,9 @@ func onTimeoutComplete():
 	if(hoursRemaining == 0):
 		#gameOverTrigger()
 		stringLabel.set_text("hours remaining")
+		get_node("/root/scene/").goto_scene(Scene)
 	else:
+		disconnect("timeout", self, "onTimeoutComplete")
 		resetTimer()
 
 #func gameOverTrigger():
