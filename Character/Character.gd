@@ -84,7 +84,7 @@ func _process(delta):
 	move_character(direction.normalized()*MAX_SPEED)
 	update_anim()
 	prev_position = self.position
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_select") and current_selected_npc:
 		if current_selected_npc.is_in_group('npc'):
 			current_selected_npc.update_heading(self.position)
 			get_tree().paused = true
@@ -93,5 +93,6 @@ func _process(delta):
 			get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(current_selected_npc.npc_name)
 			talk_hint.text = ""
 		if current_selected_npc.is_in_group('ending'):
+			get_tree().paused = true
 			current_selected_npc.end_game()
 			

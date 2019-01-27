@@ -14,7 +14,7 @@
 [ext_resource path="res://interact_object/sign.tscn" type="PackedScene" id=12]
 [ext_resource path="res://interact_object/boat.tscn" type="PackedScene" id=13]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource_name = "fade_in_black"
 length = 1.0
@@ -33,9 +33,8 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 
-resource_name = "fade_out_black"
 length = 1.0
 loop = false
 step = 0.1
@@ -52,9 +51,8 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "fade_out_white"
 length = 1.0
 loop = false
 step = 0.1
@@ -131,9 +129,9 @@ autoplay = "fade_in_black"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/fade_in_black = SubResource( 3 )
-anims/fade_out_black = SubResource( 1 )
-anims/fade_out_white = SubResource( 2 )
+anims/fade_in_black = SubResource( 1 )
+anims/fade_out_black = SubResource( 2 )
+anims/fade_out_white = SubResource( 3 )
 blend_times = [  ]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" index="4"]
@@ -166,10 +164,12 @@ bus = "Master"
 [node name="sign" parent="." index="5" instance=ExtResource( 12 )]
 
 position = Vector2( 4368.61, -1800.62 )
+objectName = "Sign"
 
 [node name="boat" parent="." index="6" instance=ExtResource( 13 )]
 
 position = Vector2( 738.946, 477.794 )
+objectName = "Boat"
 Scene = "res://CutScenes/Ending.tscn"
 
 
