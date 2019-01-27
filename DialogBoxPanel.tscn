@@ -464,7 +464,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control"]
+[node name="DialogBox" type="Control" index="0"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -770,5 +770,11 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material",
 [node name="DialogHolder" type="Node" parent="." index="1"]
 
 script = ExtResource( 4 )
+
+[connection signal="pressed" from="ColorRect/Option1Rec/option1" to="." method="_on_option1_pressed"]
+
+[connection signal="pressed" from="ColorRect/Option2Rec/option2" to="." method="_on_option2_pressed"]
+
+[connection signal="pressed" from="ColorRect/ContinueRec/continue" to="." method="_on_continue_pressed"]
 
 

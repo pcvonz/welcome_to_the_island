@@ -14,6 +14,8 @@ var response2Button
 var sentenceArray = []
 var dialogHolder 
 
+var currentNPC = "NPC1"
+
 
 # var b = "textvar"
 
@@ -24,13 +26,13 @@ func _ready():
 	nameText = get_node("ColorRect/name_border/NameText")
 	sentenceText = get_node("ColorRect/SentenceText")
 	continueButton = get_node("ColorRect/ContinueRec/continue")
-	continueButton.connect("button_down", self, "getNextSentence", ["NPC1", 0])
+	#continueButton.connect("button_down", self, "getNextSentence", ["NPC1", 0])
 	
 	response1Button = get_node("ColorRect/Option1Rec/option1")
-	response1Button.connect("button_down", self, "getNextSentence", ["NPC1", 0])
+	#response1Button.connect("button_down", self, "getNextSentence", ["NPC1", 0])
 	
 	response2Button = get_node("ColorRect/Option2Rec/option2")
-	response2Button.connect("button_down", self, "getNextSentence", ["NPC1", 1])
+	#response2Button.connect("button_down", self, "getNextSentence", ["NPC1", 1])
 	dialogHolder = get_node("DialogHolder")
 	
 	#startDialogue("NPC1")
@@ -41,6 +43,7 @@ func _ready():
 	pass
 	
 func startDialogue(name):
+	var currentNPC = name
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
 		get_tree().paused = false
@@ -93,3 +96,15 @@ func endDialogue():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+func _on_continue_pressed():
+	getNextSentence(currentNPC,0)
+
+
+func _on_option1_pressed():
+	getNextSentence(currentNPC,0)
+
+
+func _on_option2_pressed():
+	getNextSentence(currentNPC,1)
+
