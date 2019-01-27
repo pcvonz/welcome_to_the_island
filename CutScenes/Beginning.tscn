@@ -29,15 +29,19 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 4, 13 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 4, 13, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "A terrible storm is coming… 
-", "
-	Forty-eight hours is all you have. 
-", "			
-			
-			Save the island." ]
+"values": [ "The storm fell mercilessly upon the island. 
+", "	
+	The islanders sought shelter they thought would keep them safe -- They were wrong. 
+", "	
+	
+	All is lost.
+	
+	", "	
+	
+	All is lost." ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AudioStreamPlayer:playing")

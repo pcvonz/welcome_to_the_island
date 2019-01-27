@@ -3,11 +3,10 @@ extends "res://CharacterBase/MovingEntity.gd"
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var prev_position = self.position
 var rotate = 0
 var withinNpcInteractionArea = false;
 var body
-onready var anim = player.get_node('AnimationPlayer')
+
 
 func _ready():
 	var area2D = get_node("Area2D");
@@ -54,14 +53,8 @@ func _process(delta):
 		rotate = rad2deg(down.angle_to(direction)) 
 
 	move_character(direction.normalized()*MAX_SPEED)
-	if self.position == self.prev_position:
-		anim.stop()
-		anim.seek(0)
+	update_anim()
 	prev_position = self.position
-	
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
 		get_tree().paused = true
 		get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(body.npc_name)
-		
-		
-		

@@ -29,10 +29,14 @@ func _process(delta):
 	if path.size() > 0:
 		var distance_to = self.position.distance_to(path[0])
 		if self.position.distance_to(path[0]) > 2:
+			if not anim.is_playing():
+				anim.play('default')
 			var vec_to = path[0] - self.position
 			vec_to = vec_to.normalized() * MAX_SPEED
 			move_and_collide(vec_to)
+			self.prev_position = self.position
 			if self.position.distance_to(path[0]) > 1:
 				update_heading(path[0])
 		else:
+			anim.stop()
 			path.remove(0)

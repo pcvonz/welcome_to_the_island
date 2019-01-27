@@ -9,11 +9,23 @@
 
 script = ExtResource( 2 )
 
-[node name="Viewport" parent="Node2D" index="0"]
-
-editor/display_folded = true
-
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
+
+[node name="Camera2" parent="Node2D/Viewport/player/Position3D" index="0"]
+
+current = true
+
+[node name="OmniLight" parent="Node2D/Viewport/player" index="9"]
+
+light_cull_mask = -1
+
+[node name="OmniLight2" parent="Node2D/Viewport/player" index="10"]
+
+light_cull_mask = -1
+
+[node name="OmniLight3" parent="Node2D/Viewport/player" index="11"]
+
+light_cull_mask = -1
 
 [node name="Area2D" parent="." index="1"]
 
@@ -24,3 +36,4 @@ _sections_unfolded = [ "Transform" ]
 
 
 [editable path="Node2D"]
+[editable path="Node2D/Viewport/player"]
