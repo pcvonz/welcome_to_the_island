@@ -23,7 +23,7 @@ func on_area_exited(area):
 	withinNpcInteractionArea = false;
 
 func move_character(speed, rotation):
-	move_and_slide(speed)
+	move_and_collide(speed)
 	player.get_node("Position3D").rotation_degrees.y = rotation
 	if not anim.is_playing():
 		anim.play('Armature|mixamo.com|Layer0')

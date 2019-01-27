@@ -27,7 +27,5 @@ audio_bus_name = "Master"
 
 [node name="CollisionPolygon2D" parent="Area2D" index="0" instance=ExtResource( 3 )]
 
-polygon = PoolVector2Array( 128, 0, 0, 64, -128, 0, 0, -64 )
-
 
 [editable path="Node2D"]

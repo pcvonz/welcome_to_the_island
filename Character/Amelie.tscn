@@ -1,13 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://CharacterBase/MovingEntity.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Character/Character.gd" type="Script" id=2]
-[ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=3]
-[ext_resource path="res://TileCollisionPolygon2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileCollisionPolygon2D.tscn" type="PackedScene" id=3]
 
 [node name="Amelie" index="0" instance=ExtResource( 1 )]
-
-script = ExtResource( 2 )
 
 [node name="Node2D" parent="." index="0"]
 
@@ -17,9 +14,8 @@ editor/display_folded = true
 
 editor/display_folded = true
 
-[node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
+[node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 2 )]
 
 [node name="CollisionPolygon2D2" parent="." index="2" instance=ExtResource( 4 )]
-
 
 [editable path="Node2D"]

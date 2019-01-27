@@ -3,7 +3,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-onready var map = get_node("/root/Node2D/Navigation2D") 
+onready var map = get_node("../Navigation2D") 
 var path = []
 
 func _ready():
@@ -27,3 +27,8 @@ func _process(delta):
 			move_and_collide(vec_to)
 		else:
 			path.remove(0)
+
+func _input(event):
+	if event.is_action_pressed('click'):
+		path = map.get_simple_path(self.position, event.position)
+		print(path)
