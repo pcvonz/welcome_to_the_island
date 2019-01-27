@@ -7,12 +7,10 @@ var sentenceText
 var counter
 
 var continueButton
-var yesButton
-var noButton
 
-var continueButtonRec
-var yesButtonRec
-var noButtonRec
+var response1Button
+var response2Button
+
 
 
 var sentenceArray = []
@@ -28,50 +26,64 @@ func _ready():
 	nameText = get_node("ColorRect/name_border/NameText")
 	sentenceText = get_node("ColorRect/SentenceText")
 	continueButton = get_node("ColorRect/ContinueRec/continue")
+
+	continueButton.connect("button_down", self, "getNextSentence", ["NPC1", 0])
 	
-	continueButtonRec = get_node("ColorRect/ContinueRec")
-	yesButtonRec = get_node("ColorRect/Option1Rec")
-	noButtonRec = get_node("ColorRect/Option2Rec")
+	response1Button = get_node("ColorRect/Option1Rec/option1")
+	response1Button.connect("button_down", self, "getNextSentence", ["NPC1", 0])
 	
-	yesButton = get_node("ColorRect/Option1Rec/option1")
-	noButton = get_node("ColorRect/Option2Rec/option2")
-	
-	continueButton.connect("button_down", self, "getNextSentence")
-	yesButton.connect("button_down", self, "getNextSentence")
-	noButton.connect("button_down", self, "getNextSentence")
+	response2Button = get_node("ColorRect/Option2Rec/option2")
+	response2Button.connect("button_down", self, "getNextSentence", ["NPC1", 1])
+
 	
 	dialogHolder = get_node("DialogHolder")
 	
-	hide()
+	startDialogue("NPC1")
+	
+	#hide()
 	
 	
 	pass
 	
-func startDialogue():
-	var dialog = dialogHolder.retrieveDialog()
-	sentenceArray.clear()
-	counter = 0
-	var name = dialog.getName()
-	nameText.bbcode_text = "[center] " + name + " [/center]"
-	sentenceArray = dialog.getSentences()
-	getNextSentence()
-	show()
+func startDialogue(name):
+	var dialog = dialogHolder.retrieveDialog(name)
+	if (dialog == null):
+		hide()
+		return
 	
-func getNextSentence():
-	if counter < sentenceArray.size():
-		var targetSentence = sentenceArray[counter]
-		if "++" in targetSentence:
-			yesButtonRec.show()
-			noButtonRec.show()
-			continueButtonRec.hide()
-		else:
-			yesButtonRec.hide()
-			noButtonRec.hide()
-			continueButtonRec.show()
-		sentenceText.bbcode_text = "[center] " + sentenceArray[counter] + " [/center]"
-		counter = counter +1
-	else:
-		endDialogue()
+
+	displayName(name)
+	displaySentence(dialog["Sentence"])
+	displayResponses(dialog["Responses"])
+	show()
+
+func displayName(name):
+	nameText.bbcode_text = "[center] " + name + " [/center]"
+
+func displaySentence(sentence):
+	sentenceText.bbcode_text = "[center] " + sentence + " [/center]"
+
+func displayResponses(responses):
+	match(responses.size()):
+		0:
+			continue
+		1:
+			response1Button.get_parent().hide()
+			response2Button.get_parent().hide()
+			continueButton.get_parent().show()
+		2:
+			response1Button.text = responses[0]
+			response2Button.text = responses[1]
+			response1Button.get_parent().show()
+			response2Button.get_parent().show()
+			continueButton.get_parent().hide()
+		_:
+			print("*******************TOO MANY RESPONSES*******************")
+
+func getNextSentence(name, response):
+	dialogHolder.responseToNPC(name, response)
+	startDialogue(name)
+
 		
 		
 func endDialogue():

@@ -30,6 +30,6 @@ func _process(delta):
 			var vec_to = path[0] - self.position
 			vec_to = vec_to.normalized() * MAX_SPEED
 			move_and_collide(vec_to)
-			update_heading(vec_to)
+#			update_heading(vec_to)
 		else:
 			path.remove(0)
