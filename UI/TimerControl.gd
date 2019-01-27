@@ -15,6 +15,7 @@ var dawn
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	#github please work
 	hourLabel = get_node("ColorRect/timeLabel")
 	stringLabel = get_node("ColorRect/stringText")
 	canvasModulate = get_node("ColorModulate")
