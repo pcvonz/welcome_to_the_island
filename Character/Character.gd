@@ -5,7 +5,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 # var b = "textvar"
 var rotate = 0
 var withinNpcInteractionArea = false;
-onready var current_selected_npc = get_node('../cat')
+onready var current_selected_npc = get_node('/root/Node2D/boat')
 var current_direction = Vector2(0, -1)
 onready var talk_hint = get_node('/root/Node2D/CanvasLayer/talk_hint')
 
@@ -93,5 +93,5 @@ func _process(delta):
 			get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(current_selected_npc.npc_name)
 			talk_hint.text = ""
 		if current_selected_npc.is_in_group('ending'):
-			print("boat ending")
+			current_selected_npc.end_game()
 			

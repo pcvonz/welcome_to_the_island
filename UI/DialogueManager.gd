@@ -48,8 +48,8 @@ func startDialogue(name):
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
 		get_tree().paused = false
-		if dialogHolder.isLastConversation():
-			get_node("/root/scene/").goto_scene(goodScene)
+#		if dialogHolder.isLastConversation():
+#			get_node("/root/scene/").goto_scene(goodScene)
 		hide()
 		return
 	

@@ -50,7 +50,7 @@ audio_bus_name = "Master"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -69.3385, 32.8088, 44.8295, 38.3566, 113.155, 3.02586, 22.9303, -23.8372, -94.7416, 3.31784 )
+polygon = PoolVector2Array( -44.7814, 35.2858, 44.8295, 38.3566, 75.2515, 6.40572, 22.9303, -23.8372, -44.7814, 1.8932 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="1"]
 
@@ -70,6 +70,6 @@ polygon = PoolVector2Array( -69.3385, 32.8088, 44.8295, 38.3566, 113.155, 3.0258
 [node name="highlight" parent="." index="2" instance=ExtResource( 3 )]
 
 frames = SubResource( 1 )
-frame = 6
+frame = 9
 
 

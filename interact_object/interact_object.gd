@@ -5,4 +5,6 @@ export(String, FILE) var Scene
 onready var dbox = get_node("/root/Node2D/CanvasLayer/DialogBox")
 
 func end_game():
-	pass
+	if dbox.dialogHolder.isLastConversation():
+		get_node("/root/scene/").goto_scene(Scene)
+	
