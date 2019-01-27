@@ -16,7 +16,7 @@
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
-offset = Vector2( 0, -128 )
+offset = Vector2( 0, -64 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
@@ -32,14 +32,15 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D" index="0"]
 
+position = Vector2( 0, 56 )
 build_mode = 0
 polygon = PoolVector2Array( -56, 104, -56, 120, 56, 56, 56, 40 )
 
 [node name="Sprite2" type="Sprite" parent="." index="2"]
 
-position = Vector2( 0, 184 )
+position = Vector2( -112, 232 )
 texture = ExtResource( 3 )
-offset = Vector2( 0, -128 )
+offset = Vector2( 0, -64 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2" index="0"]
@@ -55,6 +56,7 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2/StaticBody2D" index="0"]
 
+position = Vector2( 0, 64 )
 build_mode = 0
 polygon = PoolVector2Array( -56, 40, -56, 56, 56, 112, 56, 96 )
 
