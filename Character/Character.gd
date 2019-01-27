@@ -6,6 +6,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 onready var prev_position = self.position
 var rotate = 0
 var withinNpcInteractionArea = false;
+var body
 onready var anim = player.get_node('AnimationPlayer')
 
 func _ready():
@@ -16,15 +17,17 @@ func _ready():
 func on_area_entered(area):
 	print("hello area");
 	withinNpcInteractionArea = true;
-	get_tree().paused = true
-	get_node('/root/Node2D/CanvasLayer/DialogBox').startDialogue("NPC1")
-#	get_node('/root/Node2D/CanvasLayer/Node/Trigger').show()
+	if body:
+		body.get_node("highlight").hide()
+	body = area.get_parent()
+	body.get_node("highlight").show()
 	
 
 func on_area_exited(area):
 	print("goodbye area");
-#	get_node('/root/Node2D/CanvasLayer/Node/Trigger').hide()
 	withinNpcInteractionArea = false;
+	body.get_node("highlight").hide()
+	body = null
 
 func move_character(speed, rotation):
 	move_and_slide(speed)
@@ -54,5 +57,7 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
 		get_tree().paused = true
+#		get_node('/root/Node2D/CanvasLayer/Node/Trigger').hide()
+		
 		
 		

@@ -5,7 +5,6 @@ extends "res://CharacterBase/MovingEntity.gd"
 # var b = "textvar"
 onready var map = get_node("/root/Node2D/Navigation2D") 
 var path = []
-
 export var npc_func = "_go_to_random_pos"
 
 func _ready():
