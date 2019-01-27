@@ -52,7 +52,6 @@ func _process(delta):
 	
 	var diagonal_angle = atan(1/2.0)
 	if direction.x != 0 and direction.y != 0:
-		print(str(diagonal_angle))
 		direction = Vector2(sign(direction.x) * cos(diagonal_angle), sign(direction.y) * sin(diagonal_angle))
 		
 	move_character(direction.normalized()*MAX_SPEED, rotate)
