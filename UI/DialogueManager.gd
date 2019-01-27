@@ -5,6 +5,7 @@ extends Control
 var nameText
 var sentenceText
 var counter
+export(String, FILE) var goodScene
 
 var continueButton
 var response1Button
@@ -47,6 +48,8 @@ func startDialogue(name):
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
 		get_tree().paused = false
+		if dialogHolder.isLastConversation():
+			get_node("/root/scene/").goto_scene(goodScene)
 		hide()
 		return
 	

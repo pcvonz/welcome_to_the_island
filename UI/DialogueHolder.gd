@@ -38,3 +38,6 @@ func LoadScript():
 
 func setConversationHead(npcName, ID):
 	npcList[npcName].setConversationHead(ID)
+	
+func isLastConversation():
+	return (!npcList["Sunbreeze"].dialogPending() && !npcList["Willowberry"].dialogPending() && !npcList["Moonflight"].dialogPending())
