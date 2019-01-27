@@ -46,25 +46,25 @@ func onTimeoutComplete():
 	#also there can be a way to change the color of the day/ night cycle. 
 	hoursRemaining = hoursRemaining - 0.2
 	hourLabel.set_text( str(int(hoursRemaining)))
-	if hoursRemaining ==1:
+	if int(hoursRemaining) ==1:
 		stringLabel.set_text("hour remaining")
 	#below changes colors at certain points
-	if hoursRemaining == 42 or hoursRemaining == 18:
+	if int(hoursRemaining) == 42 or int(hoursRemaining) == 18:
 		canvasModulate.color = dusk
-	if hoursRemaining == 36 or hoursRemaining == 12:
+	if int(hoursRemaining) == 36 or int(hoursRemaining) == 12:
 		canvasModulate.color = night
-	if hoursRemaining == 30 or hoursRemaining == 6:
+	if int(hoursRemaining) == 30 or int(hoursRemaining) == 6:
 		canvasModulate.color = dawn
-	if hoursRemaining == 48 or hoursRemaining == 24:
+	if int(hoursRemaining) == 48 or int(hoursRemaining) == 24:
 		canvasModulate.color = day
-	if hoursRemaining == 3:
+	if int(hoursRemaining) == 3:
 		canvasModulate.color = storm
 	
 	
 	
 	
 	
-	if(hoursRemaining == 0):
+	if(hoursRemaining <= 0.01):
 		#gameOverTrigger()
 		stringLabel.set_text("hours remaining")
 		get_node("/root/scene/").goto_scene(Scene)
