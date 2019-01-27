@@ -1,24 +1,60 @@
 [
     {
+        "npcName":"Intro",
+        "Sentences":
+        [
+            {
+                "ID":"ID1",
+                "Sentence":"What a storm!  Where am I?",
+                "Responses":
+                [
+                    {
+                        "Respone":"Continue..."
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "npcName": "NPC1",
         "Sentences":
         [
             {
                 "ID": "ID1",
-                "Sentence": "Oh! Hey! You’re alive, oh I mean, wow! that must have been a rough trip! Your boat just came in on a giant wave, and…. Oh where are my manners! ::Under breath:: ‘okay friendly smile, wave hand, and welcome her, come on, you can do this…’ WELCOME TO THE ISLAND, I HOPE YOU ENJOY YOUR TIME HERE! ARE YOU HUNGRY?! I CAN GET YOU SOME FOOD!’",
-                "Action1": "[Amilie and Sunbreeze share an awkward look.]",
+                "Sentence": "Oh! Hey! You’re alive, oh I mean, wow! that must have been a rough trip! Your boat just came in on a giant wave, and…. Oh where are my manners!",
                 "Responses":
                 [
                     {
                         "Response": "Continue...",
-                        "NextSentence": "ID2"
+                        "NextSentence": "ID1A"
                     }
                 ]
             },
-            
+            {
+                "ID":"ID1A",
+                "Sentence":"You barely hear her say ‘okay friendly smile, wave hand, and welcome her, come on, you can do this…’",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue...",
+                        "NextSentence":"ID1B"
+                    }
+                ]
+            },
+            {
+                "ID":"ID1B",
+                "Sentence":"WELCOME TO THE ISLAND! MY NAME IS SUNBREEZE, I HOPE YOU ENJOY YOUR TIME HERE! ARE YOU HUNGRY?! I CAN GET YOU SOME FOOD!’",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue...",
+                        "NextSentence":"ID2"
+                    }
+                ]
+            },
             {
                 "ID": "ID2",
-                "Sentence": "Just come with me…",
+                "Sentence": "[You and Sunbreeze share an awkward look.]",
                 "Responses":
                 [
                     {
@@ -34,8 +70,7 @@
             
             {
                 "ID": "ID2A",
-                "Sentence": "Let’s go! Onwards to a great adventure!",
-                "Action1": "[You go with Sunbreeze and she takes you to a place serving pineapple salad with a nutty sauce]",
+                "Sentence": "[You go with Sunbreeze and she takes you to a place serving pineapple salad with a nutty sauce]",
                 "Responses":
                 [
                     {
@@ -85,6 +120,56 @@
 
             }
             
+        ]
+    },
+    {
+        "npcName": "NPC2",
+        "Sentences":
+        [
+            {
+                "ID": "ID1",
+                "Sentence": "Stop right there or prepared to be slimed!",
+                "Responses":
+                {
+                    "Response":"Continue...",
+                    "NextSentence":"ID2"
+                }
+            },
+            {
+                "ID":"ID2",
+                "Sentence": "What are you doing here?! Who are you?! Why are you on my property?! What are you after?! You know what?! You’ve got 3 seconds! You know what, just get out of here! I’ve got a ber…. Very big saw and I know how to use it!",
+                "Responses":
+                [
+                    {
+                        "Response":"Stand your ground",
+                        "NextSentence":"ID2A"
+                    },
+                    {
+                        "Response":"Back Off",
+                        "NextSentence":"ID2B"
+                    }
+                ]
+            },
+            {
+                "ID":"ID2A",
+                "Sentence":"Whoa! We got a hot shot here! Next time I see you… you know what? There won’t be a next time, you better watch yourself. Hmph!",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue..."
+                    }
+                ]
+            },
+            {
+                "ID":"ID2B",
+                "Sentence":"Hah! That’s what I thought! You best watch yourself. I better not see you on my property again.",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue..."
+                    }
+                ]
+            }
         ]
     }
 ]
