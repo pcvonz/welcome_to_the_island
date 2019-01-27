@@ -6,6 +6,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 onready var prev_position = self.position
 var rotate = 0
 onready var anim = player.get_node('AnimationPlayer')
+
 func move_character(speed, rotation):
 	move_and_slide(speed)
 	player.get_node("Position3D").rotation_degrees.y = rotation
