@@ -5,14 +5,22 @@ extends "res://CharacterBase/MovingEntity.gd"
 # var b = "textvar"
 onready var prev_position = self.position
 var rotate = 0
+var withinNpcInteractionArea = false;
 onready var anim = player.get_node('AnimationPlayer')
 
 func _ready():
 	var area2D = get_node("Area2D");
-	area2D.connect("body_entered", self, "on_body_entered");
+	area2D.connect("area_entered", self, "on_area_entered");
+	area2D.connect("area_exited", self, "on_area_exited");
+	
 
-func on_body_entered(body):
-	pass
+func on_area_entered(area):
+	print("hello area");
+	withinNpcInteractionArea = true;
+
+func on_area_exited(area):
+	print("goodbye area");
+	withinNpcInteractionArea = false;
 
 func move_character(speed, rotation):
 	move_and_collide(speed)
@@ -39,3 +47,7 @@ func _process(delta):
 		anim.stop()
 		anim.seek(0)
 	prev_position = self.position
+	
+	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
+		print("npc interaction!");
+		
