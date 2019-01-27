@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Welcome to the Island"
-run/main_scene="res://CutScenes/Beginning.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
