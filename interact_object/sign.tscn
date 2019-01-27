@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://interact_object/boat.tscn" type="PackedScene" id=1]
+
+[node name="Sprite" index="0" instance=ExtResource( 1 )]
+
+interact_text = "Press space to build house"
+Scene = "res://CutScenes/EndGood.tscn"
+
+[node name="highlight" parent="." index="2"]
+
+frame = 1
+
+

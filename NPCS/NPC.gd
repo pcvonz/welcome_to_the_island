@@ -9,8 +9,11 @@ export var npc_func = "_go_to_random_pos"
 
 export var npc_name = 'NPC1'
 
+var interact_text
+
 func _ready():
 	$Node2D/Timer.connect("timeout", self, npc_func)
+	interact_text = "Press space to talk to " + npc_name
 
 func update_heading(pos):
 	var angle = self.position.angle_to_point(pos)

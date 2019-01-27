@@ -32,13 +32,13 @@ func update_selected_body(areas):
 		var closest_body = get_closest_body(areas)
 		current_selected_npc = closest_body
 		current_selected_npc.get_node("highlight").show()
-		talk_hint.text = "Press space to talk to " + current_selected_npc.npc_name
+		talk_hint.text = current_selected_npc.interact_text
 	else:
 		current_selected_npc = null
 		talk_hint.text = ""
 
 func reset_highlight():
-	var npcs = get_tree().get_nodes_in_group("npc")
+	var npcs = get_tree().get_nodes_in_group("npc") + get_tree().get_nodes_in_group("ending")
 	for npc in npcs:
 		npc.get_node("highlight").hide()
 
@@ -84,10 +84,14 @@ func _process(delta):
 	move_character(direction.normalized()*MAX_SPEED)
 	update_anim()
 	prev_position = self.position
-	if Input.is_action_just_pressed("ui_select") and current_selected_npc:
-		current_selected_npc.update_heading(self.position)
-		get_tree().paused = true
-		if (current_selected_npc.npc_name == "Gigi-Jay"):
-			get_node('/root/Node2D/CanvasLayer/DialogBox/').setConversationHead(current_selected_npc.npc_name,"ID1")
-		get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(current_selected_npc.npc_name)
-		talk_hint.text = ""
+	if Input.is_action_just_pressed("ui_select"):
+		if current_selected_npc.is_in_group('npc'):
+			current_selected_npc.update_heading(self.position)
+			get_tree().paused = true
+			if (current_selected_npc.npc_name == "Gigi-Jay"):
+				get_node('/root/Node2D/CanvasLayer/DialogBox/').setConversationHead(current_selected_npc.npc_name,"ID1")
+			get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(current_selected_npc.npc_name)
+			talk_hint.text = ""
+		if current_selected_npc.is_in_group('ending'):
+			print("boat ending")
+			
