@@ -87,7 +87,8 @@ func endDialogue():
 	hide()
 	
 
-
+func setConversationHead(npcName,ID):
+	dialogHolder.setConversationHead(npcName,ID)
 	
 	
 	

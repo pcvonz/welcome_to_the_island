@@ -35,4 +35,6 @@ func LoadScript():
 	script = parse_json(scriptData)
 	for npc in script:
 		npcList[npc.npcName] = Dialog.new(npc.Sentences)
-	
+
+func setConversationHead(npcName, ID):
+	npcList[npcName].setConversationHead(ID)

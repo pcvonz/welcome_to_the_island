@@ -65,5 +65,7 @@ func _process(delta):
 	prev_position = self.position
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
 		get_tree().paused = true
+		if (body.npc_name == "Gigi-Jay"):
+			get_node('/root/Node2D/CanvasLayer/DialogBox/').setConversationHead(body.npc_name,"ID1")
 		get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(body.npc_name)
 		talk_hint.text = ""

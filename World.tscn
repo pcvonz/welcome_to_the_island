@@ -53,6 +53,7 @@ npc_name = "Moonflight"
 [node name="cat" parent="Walls" index="4" instance=ExtResource( 9 )]
 
 position = Vector2( 553, 213.909 )
+npc_name = "Gigi-Jay"
 
 [node name="CanvasLayer" parent="." index="2" instance=ExtResource( 10 )]
 
