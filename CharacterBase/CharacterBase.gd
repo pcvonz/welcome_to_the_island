@@ -13,7 +13,6 @@ var frame_swtich_timer = 0
 
 func _ready():
 	viewport = get_node("Viewport")
-	sprite = get_node("Sprite")
 	viewport_sprite = get_node("Viewport_Sprite")
 
 	# Assign the sprite's texture to the viewport texture
