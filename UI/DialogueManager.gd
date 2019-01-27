@@ -43,7 +43,7 @@ func _ready():
 	pass
 	
 func startDialogue(name):
-	var currentNPC = name
+	currentNPC = name
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
 		get_tree().paused = false
@@ -87,7 +87,8 @@ func endDialogue():
 	hide()
 	
 
-
+func setConversationHead(npcName,ID):
+	dialogHolder.setConversationHead(npcName,ID)
 	
 	
 	

@@ -20,7 +20,7 @@ func _ready():
 	stringLabel = get_node("ColorRect/stringText")
 	canvasModulate = get_node("/root/Node2D/CanvasModulate")
 	
-	night = Color("#84879B")
+	night = Color("#5d67d2")
 	dusk = Color("#CFA876")
 	day = Color ("#FFFFFF")
 	dawn = Color("#CF8076")

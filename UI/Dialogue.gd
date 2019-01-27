@@ -30,3 +30,6 @@ func dialogPending():
 		return true
 	else: 
 		return false
+
+func setConversationHead(ID):
+	currentID = ID

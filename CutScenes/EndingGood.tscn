@@ -17,10 +17,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 4, 8, 13, 17 ),
+"times": PoolRealArray( 0, 2, 4.5, 8, 11.5, 17 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CenterContainer/RichTextLabel:bbcode_text")
@@ -29,22 +29,23 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1, 4, 13, 17 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2, 4.5, 8, 11.5, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "A terrible storm is coming…", "A terrible storm is coming…", "	Forty-eight hours is all you have.", "	
-	
-	Save the island.
-	
-	", "
-" ]
+"values": [ "
+The storm fell mercilessly upon the island.", "
+The storm fell mercilessly upon the island.", "	
+However, your deeds brought together a community-", "	
+However, your deeds brought together a community-", "
+Everyone survived, and after the storm they rebuilt a better life together.", "
+Everyone survived, and after the storm they rebuilt a better life together." ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AudioStreamPlayer:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
@@ -103,7 +104,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0, 0, 0, 1 )
+color = Color( 1, 1, 1, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="1"]
 
@@ -142,16 +143,16 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/mono_font = ExtResource( 2 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
 bbcode_text = "
-"
+Everyone survived, and after the storm they rebuilt a better life together."
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
 text = "
-"
+Everyone survived, and after the storm they rebuilt a better life together."
 scroll_active = false
 scroll_following = false
 selection_enabled = false
@@ -174,7 +175,7 @@ _sections_unfolded = [ "Playback Options" ]
 stream = ExtResource( 3 )
 volume_db = -80.0
 pitch_scale = 1.0
-autoplay = true
+autoplay = false
 mix_target = 1
 bus = "Master"
 
