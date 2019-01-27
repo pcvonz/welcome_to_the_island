@@ -1,25 +1,32 @@
 extends Node
 
-var npcName;
-var sentences = []
-	
-func _init(_npcName, _sentences):
-	npcName = _npcName
-	sentences= _sentences	
-	
+var _sentences = {}
+var currentID = null
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+func _init(sentences):
+	for sentence in sentences:
+		if currentID == null:
+			currentID = sentence.ID
+		_sentences[sentence.ID] = {"Sentence":sentence.Sentence,"Responses":sentence.Responses}
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func getCurrentSentence():
+	return _sentences[currentID]["Sentence"]
 
-func getName():
-	return npcName
+func getCurrentResponses():
+	var responses = []
+	for response in _sentences[currentID]["Responses"]:
+		responses.append(response["Response"])
+	return responses
 	
-func getSentences():
-	return sentences
+func responseReceived(response):
+	if (response < _sentences[currentID]["Responses"].size()):
+		if (_sentences[currentID]["Responses"][response] != null && _sentences[currentID]["Responses"][response].has("NextSentence")):
+			currentID = _sentences[currentID]["Responses"][response]["NextSentence"]
+		else:
+			currentID = null
+			
+func dialogPending():
+	if (currentID != null):
+		return true
+	else: 
+		return false
