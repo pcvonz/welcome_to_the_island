@@ -185,20 +185,111 @@
                 "Responses":
                 [
                     {
-                        "Response":"Continue..."
+                        "Response":"Continue...",
+						"NextSentence": "ID2AA"
                     }
                 ]
             },
+			{
+				"ID": "ID2AA",
+				"Sentence": "[Willowberry storms off back into his house. But drops something. Amelie picks it up.]",
+				"Responses":
+				[
+					{
+						"Response": "Continue...",
+						"NextSentence": "ID2AB"
+					}
+				]
+			},
+			{
+				"ID": "ID2AB",
+				"Sentence": "Hand Drill Obtained.",
+				"Responses":
+				[
+					{
+						"Response": "Continue..."
+					}
+				]
+			},
             {
                 "ID":"ID2B",
-                "Sentence":"Hah! That’s what I thought! You best watch yourself. I better not see you on my property again.",
+                "Sentence":"[Amelie slowly starts to back off and is about to apologize]",
                 "Responses":
                 [
                     {
-                        "Response":"Continue..."
+                        "Response":"Continue...",
+						"NextSentence": "ID2BA"
                     }
                 ]
-            }
+            },
+			{
+				"ID": "ID2BA",
+				"Sentence": "Hah! That’s what I thought! You best watch yourself. I better not see you on my property again.",
+				"Responses":
+				[
+					{
+						"Response": "Continue...",
+						"NextSentence": "ID2BB"
+					}
+				]
+			},
+			{
+				"ID": "ID2BB",
+				"Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
+				"Responses":
+				[
+					{
+						"Response": "Continue...",
+						"NextSentence": "ID2BC"
+					}
+				]
+			},
+			{
+				"ID": "ID2BC",
+				"Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
+				"Responses":
+				[
+					{
+						"Response": "Continue...",
+						"NextSentence": "ID2BD"
+					}
+				]
+			},
+			{
+				"ID": "ID2BD",
+				"Sentence": "She tries carefully to pick it up without triggering the slime trap.",
+				"Responses":
+				[
+					{
+						"Response": "Continue...",
+						"NextSentence": "ID2BE"
+					}
+				]
+			},
+			{
+				"ID": "ID2BE",
+				"Sentence": "Long piece of wood obtained",
+				"Responses":
+				[
+					{
+						"Response": "Continue..."
+					}
+				]
+			}
         ]
     }
+	"npcName": "Gigi-Jay",
+	"Sentences':
+	[
+		{
+                "ID": "ID1",
+                "Sentence": "Meow! Meow! Meow!",
+                "Responses":
+                [ 
+                    {
+                        "Response":"Continue..."
+                    } 
+                ]
+        }
+	]
 ]
