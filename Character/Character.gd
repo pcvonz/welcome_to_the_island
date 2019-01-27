@@ -6,7 +6,13 @@ extends "res://CharacterBase/MovingEntity.gd"
 var rotate = 0
 var withinNpcInteractionArea = false;
 var body
+onready var talk_hint = get_node('/root/Node2D/CanvasLayer/talk_hint')
 
+var npc_names = {
+	"NPC1": "Sunbreeze",
+	"NPC2": "Willowberry",
+	"NPC3": "Moonflight"
+	}
 
 func _ready():
 	var area2D = get_node("Area2D");
@@ -19,14 +25,20 @@ func on_area_entered(area):
 	if body:
 		body.get_node("highlight").hide()
 	body = area.get_parent()
+	update_talk_hint(body.npc_name)
 	body.get_node("highlight").show()
-	
+
 
 func on_area_exited(area):
 	print("goodbye area");
 	withinNpcInteractionArea = false;
-	body.get_node("highlight").hide()
-	body = null
+	if body:
+		body.get_node("highlight").hide()
+		body = null
+	talk_hint.text = ""
+
+func update_talk_hint(name):
+	talk_hint.text = "Press space to talk to " + npc_names[name]
 
 func move_character(speed):
 	move_and_slide(speed)

@@ -106,7 +106,7 @@ proximity_fade_enable = false
 distance_fade_enable = false
 _sections_unfolded = [ "Albedo", "Transmission" ]
 
-[node name="player" index="0" instance=ExtResource( 1 )]
+[node name="player" instance=ExtResource( 1 )]
 
 [node name="Position3D" type="Position3D" parent="." index="1"]
 
@@ -161,7 +161,7 @@ _sections_unfolded = [ "Light" ]
 
 [node name="OmniLight2" type="OmniLight" parent="." index="5"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.69289, -2.20293 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0002141, 3.68384, -2.20293 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 16.0

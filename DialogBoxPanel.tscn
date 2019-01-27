@@ -2,17 +2,14 @@
 
 [ext_resource path="res://UI/DialogueManager.gd" type="Script" id=1]
 [ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
-[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=3]
+[ext_resource path="res://UI/DialogueTheme.tres" type="Theme" id=3]
+[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
 
-[sub_resource type="Theme" id=2]
-
-default_font = ExtResource( 2 )
-
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -41,7 +38,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -70,7 +67,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border Width", "Shadow" ]
 
-[sub_resource type="Theme" id=5]
+[sub_resource type="Theme" id=4]
 
 default_font = ExtResource( 2 )
 /colors/ = Color( 0, 0, 0, 1 )
@@ -84,7 +81,7 @@ Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
-Button/styles/normal = SubResource( 3 )
+Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = null
 ButtonGroup/styles/panel = null
 CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
@@ -265,7 +262,7 @@ OptionButton/icons/arrow = null
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
 OptionButton/styles/hover = null
-OptionButton/styles/normal = SubResource( 4 )
+OptionButton/styles/normal = SubResource( 3 )
 OptionButton/styles/pressed = null
 Panel/styles/panel = null
 Panel/styles/panelf = null
@@ -594,7 +591,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 size_flags_stretch_ratio = 8.0
-theme = SubResource( 2 )
+theme = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[center]
 
@@ -672,7 +669,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 5 )
+theme = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -716,7 +713,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 5 )
+theme = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -760,7 +757,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 5 )
+theme = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -772,6 +769,6 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material",
 
 [node name="DialogHolder" type="Node" parent="." index="1"]
 
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
 
