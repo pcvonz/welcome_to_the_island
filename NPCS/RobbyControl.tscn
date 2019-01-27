@@ -2,21 +2,14 @@
 
 [ext_resource path="res://CharacterBase/MovingEntity.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCS/NPC.gd" type="Script" id=2]
-[ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=3]
+[ext_resource path="res://NPCS/npc1.tscn" type="PackedScene" id=3]
 
 [node name="Robby" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
+npc_func = "_go_to_random_pos"
 
-[node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
-
-[node name="OmniLight" parent="Node2D/Viewport/player" index="9"]
-
-light_cull_mask = -1
-
-[node name="OmniLight2" parent="Node2D/Viewport/player" index="10"]
-
-light_cull_mask = -1
+[node name="Scene Root" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
 
 [node name="Timer" parent="Node2D" index="2"]
 
@@ -24,4 +17,3 @@ autostart = true
 
 
 [editable path="Node2D"]
-[editable path="Node2D/Viewport/player"]

@@ -6,8 +6,10 @@ extends "res://CharacterBase/MovingEntity.gd"
 onready var map = get_node("/root/Node2D/Navigation2D") 
 var path = []
 
+export var npc_func = "_go_to_random_pos"
+
 func _ready():
-	$Node2D/Timer.connect("timeout", self, "_go_to_random_pos")
+	$Node2D/Timer.connect("timeout", self, npc_func)
 
 func update_heading(pos):
 	var angle = self.position.angle_to_point(pos)
