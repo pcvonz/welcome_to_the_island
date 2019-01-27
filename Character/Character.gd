@@ -9,10 +9,11 @@ onready var anim = player.get_node('AnimationPlayer')
 
 func _ready():
 	var area2D = get_node("Area2D");
-	area2D.connect("body_entered", self, "on_body_entered");
+	area2D.connect("area_entered", self, "on_area_entered");
 	
 
-func on_body_entered(body):
+func on_area_entered(area):
+	print("hello area");
 	pass
 
 func move_character(speed, rotation):
