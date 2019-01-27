@@ -6,6 +6,7 @@ extends "res://CharacterBase/MovingEntity.gd"
 var rotate = 0
 var withinNpcInteractionArea = false;
 var body
+var current_direction = Vector2(0, -1)
 onready var talk_hint = get_node('/root/Node2D/CanvasLayer/talk_hint')
 
 var npc_names = {
@@ -62,7 +63,8 @@ func _process(delta):
 		direction = Vector2(sign(direction.x) * cos(diagonal_angle), sign(direction.y) * sin(diagonal_angle))
 	
 	if direction.length() > 0:	
-		rotate = rad2deg(down.angle_to(direction)) 
+		rotate = rad2deg(down.angle_to(direction))
+		current_direction = direction 
 
 	move_character(direction.normalized()*MAX_SPEED)
 	update_anim()
@@ -70,3 +72,4 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
 		get_tree().paused = true
 		get_node('/root/Node2D/CanvasLayer/DialogBox/').startDialogue(body.npc_name)
+		talk_hint.text = ""
