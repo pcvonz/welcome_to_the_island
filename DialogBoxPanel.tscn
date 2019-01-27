@@ -774,5 +774,6 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material",
 [node name="DialogHolder" type="Node" parent="." index="1"]
 
 script = ExtResource( 3 )
+scriptFile = "script/script.json"
 
 

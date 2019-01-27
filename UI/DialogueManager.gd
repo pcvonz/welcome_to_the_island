@@ -31,7 +31,6 @@ func _ready():
 	
 	response2Button = get_node("ColorRect/Option2Rec/option2")
 	response2Button.connect("button_down", self, "getNextSentence", ["NPC1", 1])
-	
 	dialogHolder = get_node("DialogHolder")
 	
 	#startDialogue("NPC1")
@@ -44,6 +43,7 @@ func _ready():
 func startDialogue(name):
 	var dialog = dialogHolder.retrieveDialog(name)
 	if (dialog == null):
+		get_tree().paused = false
 		hide()
 		return
 	

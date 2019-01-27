@@ -34,11 +34,11 @@ shadow_atlas_quad_2 = 3
 shadow_atlas_quad_3 = 4
 _sections_unfolded = [ "Physics", "Render Target", "Rendering" ]
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Viewport_Sprite" type="Sprite" parent="." index="1"]
 
-[node name="Viewport_Sprite" type="Sprite" parent="." index="2"]
+position = Vector2( 0, -40 )
 
-[node name="Timer" type="Timer" parent="." index="3"]
+[node name="Timer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 1.0

@@ -12,14 +12,18 @@ func _ready():
 	var area2D = get_node("Area2D");
 	area2D.connect("area_entered", self, "on_area_entered");
 	area2D.connect("area_exited", self, "on_area_exited");
-	
 
 func on_area_entered(area):
 	print("hello area");
 	withinNpcInteractionArea = true;
+	get_tree().paused = true
+	get_node('/root/Node2D/CanvasLayer/DialogBox').startDialogue("NPC1")
+#	get_node('/root/Node2D/CanvasLayer/Node/Trigger').show()
+	
 
 func on_area_exited(area):
 	print("goodbye area");
+#	get_node('/root/Node2D/CanvasLayer/Node/Trigger').hide()
 	withinNpcInteractionArea = false;
 
 func move_character(speed, rotation):
@@ -49,5 +53,6 @@ func _process(delta):
 	prev_position = self.position
 	
 	if Input.is_action_just_pressed("ui_select") and withinNpcInteractionArea:
-		print("npc interaction!");
+		get_tree().paused = true
+		
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TileMap/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TileMap/Walls/TileBase.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Character/Amelie.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Character/Camera2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://NPCS/RobbyControl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://DialogBoxPanel.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -13,10 +14,10 @@
 
 [node name="Walls" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 0, 0 )
+position = Vector2( -1, -6.10352e-005 )
 tile_set = ExtResource( 3 )
 cell_y_sort = true
-tile_data = PoolIntArray( -524304, 0, 0, -458768, 0, 0, -393232, 0, 0, -327696, 0, 0, -393203, 2, 0, -262160, 0, 0, -196624, 0, 0, -131088, 0, 0, -65553, 0, 0, -65552, 0, 0, -131058, 2, 0, -17, 0, 0, -16, 0, 0, 65520, 0, 0, 131076, 6, 0, 196608, 6, 0, 262144, 6, 0, 327680, 6, 0, 327687, 6, 0, 655358, 4, 0, 589827, 6, 0, 589828, 6, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0 )
+tile_data = PoolIntArray( -524304, 0, 0, -458768, 0, 0, -393232, 0, 0, -393203, 2, 0, -131088, 0, 0, -65553, 0, 0, -65552, 0, 0, -131058, 2, 0, -17, 0, 0, -16, 0, 0, 65520, 0, 0, 131076, 6, 0, 196608, 6, 0, 262144, 6, 0, 327680, 6, 0, 327687, 6, 0, 655358, 4, 0, 589827, 6, 0, 589828, 6, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0 )
 _sections_unfolded = [ "Cell", "Collision", "Occluder", "Transform" ]
 
 [node name="Amelie" parent="Walls" index="0" instance=ExtResource( 4 )]
@@ -57,5 +58,19 @@ MAX_SPEED = 2
 
 position = Vector2( 598.285, -562.476 )
 MAX_SPEED = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="DialogBox" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
+
+pause_mode = 2
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Pause", "Rect", "Theme", "Visibility" ]
 
 

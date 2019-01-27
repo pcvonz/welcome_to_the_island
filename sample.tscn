@@ -3,7 +3,7 @@
 [ext_resource path="res://DialogBoxPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testbutton.tscn" type="PackedScene" id=2]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="DialogBox" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -48,3 +48,4 @@ margin_bottom = 259.0
 
 
 [editable path="DialogBox"]
+[editable path="Trigger"]
