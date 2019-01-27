@@ -277,11 +277,12 @@
 				]
 			}
         ]
-    }
-	"npcName": "Gigi-Jay",
-	"Sentences':
-	[
-		{
+    },
+    {
+        "npcName": "Gigi-Jay",
+        "Sentences":
+        [
+            {
                 "ID": "ID1",
                 "Sentence": "Meow! Meow! Meow!",
                 "Responses":
@@ -290,6 +291,7 @@
                         "Response":"Continue..."
                     } 
                 ]
-        }
-	]
+            }
+        ]
+    }
 ]
