@@ -35,6 +35,10 @@ margin_bottom = 190.0
 
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
 
+[node name="DialogHolder" parent="DialogBox" index="1"]
+
+scriptFile = "Script/script.json"
+
 [node name="Trigger" parent="." index="1" instance=ExtResource( 2 )]
 
 margin_left = 460.0

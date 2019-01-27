@@ -14,7 +14,7 @@ func _ready():
 	var diagHolder = get_node("/root/Node/DialogBox/DialogHolder")
 	#var targetDialog = self.connect("pressed", diagHolder, "retrieveDialog", ["dialogue"])
 	
-	self.connect("pressed", diagManager, "startDialogue" )
+	self.connect("pressed", diagManager, "startDialogue", ["NPC1"] )
 	
 	pass
 

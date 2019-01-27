@@ -34,9 +34,9 @@ func _ready():
 	
 	dialogHolder = get_node("DialogHolder")
 	
-	startDialogue("NPC1")
+	#startDialogue("NPC1")
 	
-	#hide()
+	hide()
 	
 	
 	pass
