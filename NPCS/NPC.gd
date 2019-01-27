@@ -26,7 +26,6 @@ func _go_to_random_pos():
 		path = map.get_simple_path(self.position, rand_pos)
 
 func _go_to_player_pos():
-	print("move it cat")
 	var amelie = get_node("../Amelie")
 	var pos = amelie.position
 	var amelie_direction = amelie.current_direction
@@ -34,11 +33,6 @@ func _go_to_player_pos():
 	
 	var how_far_behind = 100
 	var behind_pos = pos + behind_direction * how_far_behind
-	
-	print("behind dir: " + str(behind_direction))
-	print("pos: " + str(pos))
-	print("behind pos: "+ str(behind_pos))
-	
 	
 	path = map.get_simple_path(self.position, behind_pos)
 	
