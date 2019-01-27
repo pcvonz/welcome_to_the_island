@@ -23,10 +23,10 @@ func _ready():
 	canvasModulate = get_node("/root/Node2D/CanvasModulate")
 	
 	night = Color("#5d67d2")
-	dusk = Color("#CFA876")
+	dusk = Color("#ff9789")
 	day = Color ("#FFFFFF")
-	dawn = Color("#CF8076")
-	storm = Color("#7C00A4")
+	dawn = Color("#ffcfa5")
+	storm = Color("#c000ff")
 	
 	hoursRemaining = 48
 	canvasModulate.color = day
