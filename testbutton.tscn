@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://UI/DialogueTrigger.gd" type="Script" id=1]
+[ext_resource path="res://UI/Fonts/Neucha.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://mainMenuButton.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -456,6 +457,14 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
+[sub_resource type="DynamicFont" id=4]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="Option1Rec2" type="ColorRect"]
 
 anchor_left = 0.0
@@ -491,14 +500,16 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "START DIALOG"
+text = "PLAY"
 flat = true
 align = 1
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+Scene = "res://CutScenes/Beginning.tscn"
 
 
