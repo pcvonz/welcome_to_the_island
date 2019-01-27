@@ -175,7 +175,7 @@ stream = ExtResource( 3 )
 volume_db = 1.0
 pitch_scale = 1.0
 autoplay = true
-mix_target = 0
+mix_target = 1
 bus = "Master"
 
 

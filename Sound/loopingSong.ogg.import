@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loopingSong.ogg-c8745f99f80aec951df406fe34ce0062.oggstr"
+
+[deps]
+
+source_file="res://Sound/loopingSong.ogg"
+dest_files=[ "res://.import/loopingSong.ogg-c8745f99f80aec951df406fe34ce0062.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
