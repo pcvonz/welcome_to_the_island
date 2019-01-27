@@ -49,6 +49,12 @@ func _process(delta):
 	if Input.is_action_pressed("ui_down"):
 		rotate = 0
 		direction += down
+	
+	var diagonal_angle = atan(1/2.0)
+	if direction.x != 0 and direction.y != 0:
+		print(str(diagonal_angle))
+		direction = Vector2(sign(direction.x) * cos(diagonal_angle), sign(direction.y) * sin(diagonal_angle))
+		
 	move_character(direction.normalized()*MAX_SPEED, rotate)
 	if self.position == self.prev_position:
 		anim.stop()
