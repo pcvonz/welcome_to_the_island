@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://UI/DialogueManager.gd" type="Script" id=1]
-[ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
-[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=3]
+[ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=2]
+[ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -10,7 +10,7 @@ render_priority = 0
 
 [sub_resource type="Theme" id=2]
 
-default_font = ExtResource( 2 )
+default_font = ExtResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 
@@ -72,7 +72,7 @@ _sections_unfolded = [ "Border Width", "Shadow" ]
 
 [sub_resource type="Theme" id=5]
 
-default_font = ExtResource( 2 )
+default_font = ExtResource( 3 )
 /colors/ = Color( 0, 0, 0, 1 )
 /colors/color1 = Color( 0.0908203, 0.96875, 0.824715, 1 )
 Button/colors/font_color = Color( 0, 0, 0, 1 )
@@ -467,40 +467,44 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control" index="0"]
+[node name="DialogBox" type="VBoxContainer"]
 
 anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 7.0
-margin_top = 390.0
-margin_right = 1027.0
-margin_bottom = 587.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+rect_min_size = Vector2( 0, 200 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 0
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+alignment = 0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
 
-[node name="ColorRect" type="ColorRect" parent="." index="0"]
+[node name="DialogHolder" type="Node" parent="." index="0"]
+
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="." index="1"]
 
 material = SubResource( 1 )
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 96.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 color = Color( 1, 1, 1, 0.657451 )
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility", "custom_styles" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_styles" ]
 
 [node name="name_border" type="ColorRect" parent="ColorRect" index="0"]
 
@@ -536,7 +540,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
@@ -556,27 +560,7 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 46.0
-margin_top = 79.0
-margin_right = 1032.0
-margin_bottom = 283.0
-grow_vertical = 0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
-
-[node name="SentenceText" type="RichTextLabel" parent="ColorRect" index="2"]
+[node name="SentenceText" type="RichTextLabel" parent="ColorRect" index="1"]
 
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
@@ -584,10 +568,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 22.0
-margin_top = 24.0
-margin_right = 1008.0
-margin_bottom = 153.0
+margin_left = 25.0
+margin_top = 7.0
+margin_right = 1011.0
+margin_bottom = 136.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -597,9 +581,7 @@ size_flags_vertical = 1
 size_flags_stretch_ratio = 8.0
 theme = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]
-
-sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
+bbcode_text = "sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
 asdfasdflkajsd f
 Asdfasdfjasd
 faskdfh as
@@ -609,17 +591,12 @@ asdflkasjd f
 asdlfkj as
 dflkajsd f
 asdfalskdjf alskdjf asldkfj asdfa
-Sdfasdfasdfasdfasjdf lksjdflkja sdlfikja 
-
-
-[/center]"
+Sdfasdfasdfasdfasjdf lksjdflkja sdlfikja "
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 6
-text = "
-
-sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
+text = "sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
 asdfasdflkajsd f
 Asdfasdfjasd
 faskdfh as
@@ -629,36 +606,154 @@ asdflkasjd f
 asdlfkj as
 dflkajsd f
 asdfalskdjf alskdjf asldkfj asdfa
-Sdfasdfasdfasdfasjdf lksjdflkja sdlfikja 
-
-
-"
+Sdfasdfasdfasdfasjdf lksjdflkja sdlfikja "
 scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Anchor", "BBCode", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="Option1Rec" type="ColorRect" parent="ColorRect" index="3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 251.0
-margin_top = 133.0
-margin_right = 401.0
-margin_bottom = 189.0
+margin_top = 100.0
+margin_right = 1024.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="ContinueRec" type="ColorRect" parent="HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 338.0
+margin_bottom = 100.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.830655, 0.925781, 0.596695, 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags" ]
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/ContinueRec" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+use_top_left = false
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="continue" type="Button" parent="HBoxContainer/ContinueRec/CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 134.0
+margin_top = 35.0
+margin_right = 204.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.830655, 0.925781, 0.596695, 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+theme = SubResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "continue"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
 
-[node name="option1" type="Button" parent="ColorRect/Option1Rec" index="0"]
+[node name="Option2Rec" type="ColorRect" parent="HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 342.0
+margin_right = 680.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.830655, 0.925781, 0.596695, 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
+
+[node name="option2" type="Button" parent="HBoxContainer/Option2Rec" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_right = 150.0
+margin_bottom = 55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "NO"
+flat = true
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
+
+[node name="Option1Rec" type="ColorRect" parent="HBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 684.0
+margin_right = 1024.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.830655, 0.925781, 0.596695, 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags" ]
+
+[node name="option1" type="Button" parent="HBoxContainer/Option1Rec" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -682,97 +777,5 @@ text = "YES"
 flat = true
 align = 1
 _sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
-
-[node name="Option2Rec" type="ColorRect" parent="ColorRect" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 651.0
-margin_top = 131.0
-margin_right = 801.0
-margin_bottom = 187.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 0.830655, 0.925781, 0.596695, 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
-
-[node name="option2" type="Button" parent="ColorRect/Option2Rec" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 149.0
-margin_bottom = 55.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = SubResource( 5 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "NO"
-flat = true
-align = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
-
-[node name="ContinueRec" type="ColorRect" parent="ColorRect" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 826.0
-margin_top = 155.0
-margin_right = 976.0
-margin_bottom = 185.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 0.830655, 0.925781, 0.596695, 1 )
-_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
-
-[node name="continue" type="Button" parent="ColorRect/ContinueRec" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 149.0
-margin_bottom = 30.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = SubResource( 5 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "continue"
-flat = true
-align = 1
-_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Material", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_styles" ]
-
-[node name="DialogHolder" type="Node" parent="." index="1"]
-
-script = ExtResource( 3 )
 
 

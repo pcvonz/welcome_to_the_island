@@ -7,6 +7,13 @@
 
 [node name="DialogBox" parent="." index="0" instance=ExtResource( 1 )]
 
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" parent="DialogBox" index="1"]
+
+editor/display_folded = true
+
 [node name="name_border" parent="DialogBox/ColorRect" index="0"]
 
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
@@ -15,29 +22,25 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect" ]
 
 margin_bottom = 40.0
 
-[node name="SentenceText" parent="DialogBox/ColorRect" index="2"]
+[node name="SentenceText" parent="DialogBox/ColorRect" index="1"]
 
 margin_left = 23.0
 margin_top = 21.0
 margin_right = 1009.0
 margin_bottom = 150.0
 
-[node name="Option1Rec" parent="DialogBox/ColorRect" index="3"]
+[node name="Option1Rec" parent="DialogBox/ColorRect" index="2"]
 
 margin_top = 150.0
 
-[node name="Option2Rec" parent="DialogBox/ColorRect" index="4"]
+[node name="Option2Rec" parent="DialogBox/ColorRect" index="3"]
 
 margin_top = 151.0
 margin_bottom = 190.0
 
-[node name="ContinueRec" parent="DialogBox/ColorRect" index="5"]
+[node name="ContinueRec" parent="DialogBox/ColorRect" index="4"]
 
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Visibility" ]
-
-[node name="DialogHolder" parent="DialogBox" index="1"]
-
-scriptFile = "Script/script.json"
 
 [node name="Trigger" parent="." index="1" instance=ExtResource( 2 )]
 
