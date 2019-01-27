@@ -123,7 +123,7 @@ polygon = PoolVector2Array( -8, 32, -48, 0, 0, -32, 48, 0 )
 position = Vector2( 560, -64 )
 texture = ExtResource( 6 )
 centered = false
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -50 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite5" index="0"]
@@ -149,7 +149,7 @@ polygon = PoolVector2Array( -8, 32, -64, 0, 0, -32, 64, 0 )
 position = Vector2( 784, -80 )
 texture = ExtResource( 7 )
 centered = false
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -50 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite6" index="0"]
@@ -175,7 +175,7 @@ polygon = PoolVector2Array( -8, 32, -64, 0, 0, -32, 64, 0 )
 position = Vector2( 1024, -184 )
 texture = ExtResource( 8 )
 centered = false
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -50 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite7" index="0"]
@@ -201,7 +201,7 @@ polygon = PoolVector2Array( -8, 32, -64, 0, 0, -32, 64, 0 )
 position = Vector2( 888, -272 )
 texture = ExtResource( 9 )
 centered = false
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -50 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite8" index="0"]
@@ -227,7 +227,7 @@ polygon = PoolVector2Array( -8, 32, -64, 0, 0, -32, 64, 0 )
 position = Vector2( 1256, -304 )
 texture = ExtResource( 10 )
 centered = false
-offset = Vector2( 0, -64 )
+offset = Vector2( 0, -50 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite9" index="0"]
