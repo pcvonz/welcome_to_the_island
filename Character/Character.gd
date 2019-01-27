@@ -7,8 +7,6 @@ onready var prev_position = self.position
 var rotate = 0
 onready var anim = player.get_node('AnimationPlayer')
 
-
-
 func _ready():
 	var area2D = get_node("Area2D");
 	area2D.connect("body_entered", self, "on_body_entered");
