@@ -36,17 +36,18 @@ MAX_SPEED = 200
 
 position = Vector2( 170, -220 )
 MAX_SPEED = 1
+npc_name = "Sunbreeze"
 
 [node name="npc_2" parent="Walls" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 528.267, -79.944 )
 MAX_SPEED = 1
-npc_name = "NPC2"
+npc_name = "Willowberry"
 
 [node name="npc_3" parent="Walls" index="3" instance=ExtResource( 8 )]
 
 MAX_SPEED = 1
-npc_name = "NPC3"
+npc_name = "Moonflight"
 
 [node name="cat" parent="Walls" index="4" instance=ExtResource( 9 )]
 

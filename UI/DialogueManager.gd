@@ -14,7 +14,7 @@ var response2Button
 var sentenceArray = []
 var dialogHolder 
 
-var currentNPC = "NPC1"
+var currentNPC = "Sunbreeze"
 
 
 # var b = "textvar"

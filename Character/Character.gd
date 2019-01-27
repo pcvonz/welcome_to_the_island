@@ -9,12 +9,6 @@ var body
 var current_direction = Vector2(0, -1)
 onready var talk_hint = get_node('/root/Node2D/CanvasLayer/talk_hint')
 
-var npc_names = {
-	"NPC1": "Sunbreeze",
-	"NPC2": "Willowberry",
-	"NPC3": "Moonflight"
-	}
-
 func _ready():
 	var area2D = get_node("Area2D");
 	area2D.connect("area_entered", self, "on_area_entered");
@@ -39,7 +33,7 @@ func on_area_exited(area):
 	talk_hint.text = ""
 
 func update_talk_hint(name):
-	talk_hint.text = "Press space to talk to " + npc_names[name]
+	talk_hint.text = "Press space to talk to " + name
 
 func move_character(speed):
 	move_and_slide(speed)
