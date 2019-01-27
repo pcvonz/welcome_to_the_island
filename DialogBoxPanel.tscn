@@ -4,7 +4,7 @@
 [ext_resource path="res://UI/Fonts/dynamicHand.tres" type="DynamicFont" id=2]
 [ext_resource path="res://UI/DialogueHolder.gd" type="Script" id=3]
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
 
@@ -12,7 +12,7 @@ render_priority = 0
 
 default_font = ExtResource( 2 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -41,7 +41,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border", "Border Width" ]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -70,7 +70,7 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Border Width", "Shadow" ]
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=5]
 
 default_font = ExtResource( 2 )
 /colors/ = Color( 0, 0, 0, 1 )
@@ -84,7 +84,7 @@ Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
 Button/styles/hover = null
-Button/styles/normal = SubResource( 4 )
+Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = null
 ButtonGroup/styles/panel = null
 CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
@@ -265,7 +265,7 @@ OptionButton/icons/arrow = null
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
 OptionButton/styles/hover = null
-OptionButton/styles/normal = SubResource( 5 )
+OptionButton/styles/normal = SubResource( 4 )
 OptionButton/styles/pressed = null
 Panel/styles/panel = null
 Panel/styles/panelf = null
@@ -467,16 +467,15 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control" index="0"]
+[node name="DialogBox" type="Control"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 7.0
-margin_top = 390.0
-margin_right = 1027.0
-margin_bottom = 587.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -510.0
+margin_top = -197.0
+margin_right = 510.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -488,7 +487,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material"
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
-material = SubResource( 3 )
+material = SubResource( 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -673,7 +672,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 6 )
+theme = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -717,7 +716,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 6 )
+theme = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -761,7 +760,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 6 )
+theme = SubResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

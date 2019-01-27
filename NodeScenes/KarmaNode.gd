@@ -4,13 +4,17 @@ extends Node
 # var a = 2
 # var b = "textvar"
 var total_karma = 0
+#answer could be an int or a string... depending on time. If string it could be dialog code. 
 var answer
 
-func answer_question():
+
+
+func answer_question(answer):
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	if answer is false:
 		print('Wrong answer given')
+		
 		
 	else:
 		print('Correct answer given')
