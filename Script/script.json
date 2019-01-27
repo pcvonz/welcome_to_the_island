@@ -70,7 +70,7 @@
             
             {
                 "ID": "ID2A",
-                "Sentence": "[You go with Sunbreeze and she takes you to a place serving pineapple salad with a nutty sauce]",
+                "Sentence": "[You go with Sunbreeze and she takes you to a place serving pineapple salad]",
                 "Responses":
                 [
                     {
@@ -79,21 +79,39 @@
                     }
                 ]
             },
-            
             {
                 "ID": "ID2B",
-                "Action1": "[You think about it and move towards your boat which looks it’s in terrible condition, but logically you should not trust strangers especially with what happened in your last island. And this person is just has a serious weirdo vibe]",
+                "Sentence":"[You think about it and move towards your boat which looks it’s in terrible condition, but logically you should not trust strangers especially with what happened in your last island. And this person is just has a serious weirdo vibe]",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue...",
+                        "NextSentence":"ID2C"
+                    }
+                ]
+            },
+            {
+                "ID": "ID2C",
                 "Sentence": "WAIT! Okay… sorry… sorry… that was pretty awkward…. You just look like you’ve had a rough day, and I’m just trying to help. Please get yourself something to eat before you go back out there or you’ll starve to death….",
-                "Action2": "[You go with Sunbreeze and she takes you to her home where she gives you some sun baked potatoes]",
                 "Responses":
                 [
                     {
                         "Response": "Continue...",
-                        "NextSentence": "ID3"
+                        "NextSentence": "ID2D"
                     }
                 ]
             },
-            
+            {
+                "ID": "ID2D",
+                "Sentence": "[You go with Sunbreeze and she takes you to her home where she gives you some sun baked potatoes]",
+                "Responses":
+                [
+                    {
+                        "Response":"Continue...",
+                        "NextSentence":"ID3"
+                    }
+                ]
+            },
             {
                 "ID": "ID3",
                 "Sentence": "So welcome to the island. Please feel free to walk around and meet the neighbors! I would show you around but it’s about time to harvest the sun apples. Remember a sun apple a day keeps the sunshine all day… in your heart!",
@@ -105,12 +123,21 @@
                         "NextSentence": "ID4"
                     }
                 ]
-            },
-            
+            },            
             {
                 "ID": "ID4",
                 "Sentence": "BYE!!!",
-                "Action1": "Sunbreeze scampers away and trips mid way. She gets up, brushes herself off and scampers the rest of the way.",
+                "Responses":
+                [
+                    {
+                        "Response": "Continue...",
+                        "NextSentence":"ID5"
+                    }
+                ]
+            },
+            {
+                "ID": "ID5",
+                "Sentence": "[Sunbreeze scampers away and trips mid way. She gets up, brushes herself off and scampers the rest of the way.]",
                 "Responses":
                 [
                     {
@@ -118,7 +145,7 @@
                     }
                 ]
 
-            }
+            },
             
         ]
     },
