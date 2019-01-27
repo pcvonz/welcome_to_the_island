@@ -165,12 +165,14 @@ bus = "Master"
 
 position = Vector2( 4368.61, -1800.62 )
 objectName = "Sign"
+anim_string = "fade_out_white"
 
 [node name="boat" parent="." index="6" instance=ExtResource( 13 )]
 
 position = Vector2( 738.946, 477.794 )
 objectName = "Boat"
 Scene = "res://CutScenes/Ending.tscn"
+anim_string = "fade_out_black"
 
 
 [editable path="Navigation2D"]
