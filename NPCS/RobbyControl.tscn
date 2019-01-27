@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://CharacterBase/MovingEntity.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCS/NPC.gd" type="Script" id=2]
-[ext_resource path="res://player.scn" type="PackedScene" id=3]
-[ext_resource path="res://CharacterBase/Model.gd" type="Script" id=4]
+[ext_resource path="res://Character/CharacterAsset.tscn" type="PackedScene" id=3]
 
 [node name="Robby" instance=ExtResource( 1 )]
 
@@ -11,14 +10,15 @@ script = ExtResource( 2 )
 
 [node name="player" parent="Node2D/Viewport" index="0" instance=ExtResource( 3 )]
 
-script = ExtResource( 4 )
-character = NodePath("Armature")
+[node name="OmniLight" parent="Node2D/Viewport/player" index="9"]
 
-[node name="Camera" parent="Node2D/Viewport/player" index="1"]
+light_cull_mask = -1
 
-current = true
+[node name="OmniLight2" parent="Node2D/Viewport/player" index="10"]
 
-[node name="Timer" parent="Node2D" index="3"]
+light_cull_mask = -1
+
+[node name="Timer" parent="Node2D" index="2"]
 
 autostart = true
 
