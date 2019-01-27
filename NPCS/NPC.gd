@@ -27,7 +27,7 @@ func _go_to_random_pos():
 
 func _go_to_player_pos():
 	print("move it cat")
-	var pos = get_node("../Amelie").
+	var pos = get_node("../Amelie")
 	path = map.get_simple_path(self.position, pos)
 	
 	pass
