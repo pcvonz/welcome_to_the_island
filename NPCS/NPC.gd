@@ -13,8 +13,7 @@ func _ready():
 
 func update_heading(pos):
 	var angle = self.position.angle_to_point(pos)
-	print(angle)
-	$Node2D/Viewport/player/Position3D.rotation_degrees.y += angle
+	$Node2D/Viewport/player/Position3D.rotation.y = angle + (PI / 2)
 
 func _go_to_random_pos():
 	if path.size() == 0:
@@ -32,6 +31,7 @@ func _process(delta):
 			var vec_to = path[0] - self.position
 			vec_to = vec_to.normalized() * MAX_SPEED
 			move_and_collide(vec_to)
-#			update_heading(vec_to)
+			if self.position.distance_to(path[0]) > 1:
+				update_heading(path[0])
 		else:
 			path.remove(0)

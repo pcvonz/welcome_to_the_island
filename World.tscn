@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Navigation2D" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -48,35 +48,9 @@ MAX_SPEED = 200
 
 [node name="Camera2D" parent="Walls/Amelie" index="2" instance=ExtResource( 5 )]
 
-[node name="Robby" parent="Walls" index="1" instance=ExtResource( 6 )]
+[node name="Robby2" parent="Walls" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 3, 1 )
-MAX_SPEED = 2
-
-[node name="Robby2" parent="Walls" index="2" instance=ExtResource( 6 )]
-
-position = Vector2( 216.575, -676.08 )
-MAX_SPEED = 2
-
-[node name="Robby3" parent="Walls" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( 1034.52, -503.402 )
-MAX_SPEED = 2
-
-[node name="Robby4" parent="Walls" index="4" instance=ExtResource( 6 )]
-
-position = Vector2( 979.994, -198.943 )
-MAX_SPEED = 2
-
-[node name="Robby5" parent="Walls" index="5" instance=ExtResource( 6 )]
-
-position = Vector2( -103.788, -464.776 )
-MAX_SPEED = 2
-
-[node name="Robby6" parent="Walls" index="6" instance=ExtResource( 6 )]
-
-position = Vector2( 598.285, -562.476 )
-MAX_SPEED = 2
+position = Vector2( 267.032, 185.893 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
@@ -104,6 +78,7 @@ blend_times = [  ]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
 
+visible = false
 color = Color( 0, 0, 0, 1 )
 
 
