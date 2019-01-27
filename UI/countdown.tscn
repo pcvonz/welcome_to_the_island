@@ -53,7 +53,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 1, 1, 1, 0.657451 )
+color = Color( 0.992188, 0.992188, 0.992188, 1 )
 
 [node name="timeLabel" type="Label" parent="HBoxContainer/Timer/ColorRect" index="0"]
 
