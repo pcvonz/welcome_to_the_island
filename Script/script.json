@@ -675,7 +675,7 @@
             "Responses":
             [ 
                 {
-                    "Response":"Continue..."
+                    "Response":"Continue...",
                     "NextSentence": "ID2"
                 } 
             ]
@@ -715,7 +715,7 @@
             "Responses":
             [ 
                 {
-                    "Response":"Continue..."
+                    "Response":"Continue...",
                     "NextSentence":"ID2"
                 } 
             ]
@@ -745,6 +745,22 @@
             ]
         }
         
+    ]
+},
+{
+    "npcName": "Amelie",
+    "Sentences":
+    [
+        {
+            "ID":"ID1",
+            "Sentence":"I have enough materials now... I wonder, should I stay or leave?",
+            "Responses":
+            [
+                {
+                    "Response":"Continue..."
+                }
+            ]
+        }
     ]
 }
 ]
