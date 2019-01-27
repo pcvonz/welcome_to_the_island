@@ -7,8 +7,10 @@ var sentenceText
 var counter
 
 var continueButton
+
 var response1Button
 var response2Button
+
 
 
 var sentenceArray = []
@@ -24,6 +26,7 @@ func _ready():
 	nameText = get_node("ColorRect/name_border/NameText")
 	sentenceText = get_node("ColorRect/SentenceText")
 	continueButton = get_node("ColorRect/ContinueRec/continue")
+
 	continueButton.connect("button_down", self, "getNextSentence", ["NPC1", 0])
 	
 	response1Button = get_node("ColorRect/Option1Rec/option1")
@@ -31,6 +34,7 @@ func _ready():
 	
 	response2Button = get_node("ColorRect/Option2Rec/option2")
 	response2Button.connect("button_down", self, "getNextSentence", ["NPC1", 1])
+
 	
 	dialogHolder = get_node("DialogHolder")
 	
@@ -47,6 +51,7 @@ func startDialogue(name):
 		hide()
 		return
 	
+
 	displayName(name)
 	displaySentence(dialog["Sentence"])
 	displayResponses(dialog["Responses"])
@@ -78,6 +83,7 @@ func displayResponses(responses):
 func getNextSentence(name, response):
 	dialogHolder.responseToNPC(name, response)
 	startDialogue(name)
+
 		
 		
 func endDialogue():

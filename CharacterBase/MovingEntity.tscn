@@ -15,7 +15,19 @@ MAX_SPEED = 4
 
 [node name="Node2D" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="CollisionPolygon2D" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0" instance=ExtResource( 3 )]
+
+polygon = PoolVector2Array( 128, 0, 0, 64, -128, 0, 0, -64 )
 
 
 [editable path="Node2D"]
