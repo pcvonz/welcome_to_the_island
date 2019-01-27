@@ -58,7 +58,7 @@ func move_character(speed):
 	move_and_slide(speed)
 	player.get_node("Position3D").rotation_degrees.y = rotate
 	if not anim.is_playing():
-		anim.play('Armature|mixamo.com|Layer0')
+		anim.play('default')
 
 func _process(delta):
 	var areas = $Area2D.get_overlapping_areas()
@@ -85,6 +85,7 @@ func _process(delta):
 	update_anim()
 	prev_position = self.position
 	if Input.is_action_just_pressed("ui_select") and current_selected_npc:
+		current_selected_npc.update_heading(self.position)
 		get_tree().paused = true
 		if (current_selected_npc.npc_name == "Gigi-Jay"):
 			get_node('/root/Node2D/CanvasLayer/DialogBox/').setConversationHead(current_selected_npc.npc_name,"ID1")
