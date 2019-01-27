@@ -4,7 +4,7 @@
 [ext_resource path="res://NPCS/NPC.gd" type="Script" id=2]
 [ext_resource path="res://assets/terrain_grass_1.png" type="Texture" id=3]
 
-[node name="Robby" index="0" instance=ExtResource( 1 )]
+[node name="Robby" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 npc_func = "_go_to_random_pos"
