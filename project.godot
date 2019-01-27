@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Welcome to the Island"
-run/main_scene="res://World.tscn"
+run/main_scene="res://CutScenes/Beginning.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+scene="*res://autoload/scene.gd"
 
 [importer_defaults]
 

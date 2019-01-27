@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beginingeffect.ogg-dbf36d73814d367dfa82f2599e51426b.oggstr"
+
+[deps]
+
+source_file="res://Sound/beginingeffect.ogg"
+dest_files=[ "res://.import/beginingeffect.ogg-dbf36d73814d367dfa82f2599e51426b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

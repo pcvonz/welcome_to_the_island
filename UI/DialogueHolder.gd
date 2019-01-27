@@ -6,7 +6,7 @@ var Dialog = load("res://UI/Dialogue.gd")
 var dialogList
 var selectedDialog
 
-var scriptFile = "Script/script.json"
+var scriptFile = "res://Script/script.json"
 var script
 var decisions
 
