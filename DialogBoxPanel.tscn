@@ -464,7 +464,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control" index="0"]
+[node name="DialogBox" type="Control"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -506,7 +506,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 54.0
 margin_top = -40.0
-margin_right = 194.0
+margin_right = 305.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -524,7 +524,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 140.0
+margin_right = 251.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -536,16 +536,12 @@ custom_fonts/normal_font = ExtResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]
-NAME
-[/center]"
+bbcode_text = "[center]NAME[/center]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 1
-text = "
-NAME
-"
+text = "NAME"
 scroll_active = false
 scroll_following = false
 selection_enabled = false
@@ -593,9 +589,7 @@ size_flags_vertical = 1
 size_flags_stretch_ratio = 8.0
 theme = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[center]
-
-sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
+bbcode_text = "[center]sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
 asdfasdflkajsd f
 Asdfasdfjasd
 faskdfh as
@@ -613,9 +607,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 6
-text = "
-
-sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
+text = "sentenceString dfsldkfhsldfjsd lfkjsd flkasdjf laskdjf asdlfkjas dlfkajsd f
 asdfasdflkajsd f
 Asdfasdfjasd
 faskdfh as
@@ -641,7 +633,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 251.0
+margin_left = 85.0
 margin_top = 133.0
 margin_right = 401.0
 margin_bottom = 189.0
@@ -660,7 +652,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 149.0
+margin_right = 316.0
 margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -685,7 +677,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 651.0
+margin_left = 509.0
 margin_top = 131.0
 margin_right = 801.0
 margin_bottom = 187.0
@@ -704,7 +696,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 149.0
+margin_right = 292.0
 margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -730,7 +722,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 826.0
-margin_top = 155.0
+margin_top = 133.0
 margin_right = 976.0
 margin_bottom = 185.0
 rect_pivot_offset = Vector2( 0, 0 )
