@@ -707,14 +707,11 @@
         },
          {
             "ID": "ID2",
-            "Sentence": "[You have enough parts to repair the boat and sail away from the island! Would you like to repair it and set sail?]",
+            "Sentence": "[You have enough parts to repair the boat and sail away from the island!]",
             "Responses":
             [ 
                 {
-                    "Response":"Yes!"
-                },
-                {
-                    "Response":"No."
+                    "Response":"Continue..."
                 }
                 
             ]
