@@ -25,6 +25,13 @@ func _go_to_random_pos():
 		rand_pos = map.get_closest_point(rand_pos)
 		path = map.get_simple_path(self.position, rand_pos)
 
+func _go_to_player_pos():
+	print("move it cat")
+	var pos = get_node("../Amelie").
+	path = map.get_simple_path(self.position, pos)
+	
+	pass
+
 func _process(delta):
 	if path.size() > 0:
 		var distance_to = self.position.distance_to(path[0])
