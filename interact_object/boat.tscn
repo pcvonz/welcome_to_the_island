@@ -28,7 +28,7 @@ animations = [ {
 "speed": 16.0
 } ]
 
-[node name="Sprite" type="Sprite" index="0" groups=[
+[node name="Sprite" type="Sprite" groups=[
 "ending",
 ]]
 
@@ -70,6 +70,6 @@ polygon = PoolVector2Array( -69.3385, 32.8088, 44.8295, 38.3566, 113.155, 3.0258
 [node name="highlight" parent="." index="2" instance=ExtResource( 3 )]
 
 frames = SubResource( 1 )
-frame = 9
+frame = 11
 
 
