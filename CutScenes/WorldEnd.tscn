@@ -62,7 +62,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-Scene = "res://CutScenes/EndingGood.tscn"
+Scene = "res://Menu.tscn"
 
 [node name="Navigation2D" parent="." index="0" instance=ExtResource( 2 )]
 
