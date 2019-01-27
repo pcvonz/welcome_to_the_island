@@ -9,10 +9,10 @@
 [ext_resource path="res://NPCS/npc_2/npc_2_controller.tscn" type="PackedScene" id=7]
 [ext_resource path="res://NPCS/npc_3/npc_3_controller.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCS/cat/cat_controller.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/CanvasLayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Sound/loopingSong.ogg" type="AudioStream" id=11]
-[ext_resource path="res://interact_object/sign.tscn" type="PackedScene" id=12]
-[ext_resource path="res://interact_object/boat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://interact_object/sign.tscn" type="PackedScene" id=10]
+[ext_resource path="res://interact_object/boat.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/CanvasLayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sound/loopingSong.ogg" type="AudioStream" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -120,7 +120,20 @@ npc_name = "Moonflight"
 position = Vector2( 813, 323.909 )
 npc_name = "Gigi-Jay"
 
-[node name="CanvasLayer" parent="." index="2" instance=ExtResource( 10 )]
+[node name="sign" parent="Walls" index="5" instance=ExtResource( 10 )]
+
+position = Vector2( 4368.61, -1800.62 )
+objectName = "Sign"
+anim_string = "fade_out_white"
+
+[node name="boat" parent="Walls" index="6" instance=ExtResource( 11 )]
+
+position = Vector2( 738.946, 477.794 )
+objectName = "Boat"
+Scene = "res://CutScenes/Ending.tscn"
+anim_string = "fade_out_black"
+
+[node name="CanvasLayer" parent="." index="2" instance=ExtResource( 12 )]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" index="0"]
 
@@ -155,25 +168,12 @@ color = Color( 1, 1, 1, 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
-
-[node name="sign" parent="." index="5" instance=ExtResource( 12 )]
-
-position = Vector2( 4368.61, -1800.62 )
-objectName = "Sign"
-anim_string = "fade_out_white"
-
-[node name="boat" parent="." index="6" instance=ExtResource( 13 )]
-
-position = Vector2( 738.946, 477.794 )
-objectName = "Boat"
-Scene = "res://CutScenes/Ending.tscn"
-anim_string = "fade_out_black"
 
 
 [editable path="Navigation2D"]
