@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/water/terrain_water_1_6.png" type="Texture" id=15]
 [ext_resource path="res://assets/terrain_water_1.png" type="Texture" id=16]
 
-[sub_resource type="NavigationPolygon" id=5]
+[sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( 0, -8, -64, -40, 0, -72, 64, -40 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -43,7 +43,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 
 [node name="Sprite2" type="Sprite" parent="." index="1"]
@@ -55,7 +55,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite2" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -72,7 +72,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Sprite3" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -87,7 +87,7 @@ texture = ExtResource( 3 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_2" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -103,7 +103,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_3" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -119,7 +119,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_4" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -135,7 +135,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_5" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -151,7 +151,7 @@ _sections_unfolded = [ "Offset" ]
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_beach_6" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -166,7 +166,7 @@ texture = ExtResource( 8 )
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain_flowers_1" index="0"]
 
 position = Vector2( 0, 40 )
-navpoly = SubResource( 5 )
+navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -187,7 +187,6 @@ _sections_unfolded = [ "Animation", "Offset", "Region" ]
 position = Vector2( 800, 160 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 5
 playing = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="anim_water" index="0"]
