@@ -6,7 +6,7 @@ var Dialog = load("res://UI/Dialogue.gd")
 var dialogList
 var selectedDialog
 
-export(String) var scriptFile
+var scriptFile = "Script/script.json"
 var script
 var decisions
 
