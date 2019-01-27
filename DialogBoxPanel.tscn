@@ -464,7 +464,7 @@ WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 _sections_unfolded = [ "/colors", "Button", "Button/colors", "Button/constants", "Button/styles", "ButtonGroup", "Dialogs", "Dialogs/constants", "FileDialog", "FileDialog/colors", "FileDialog/icons", "Fonts", "OptionButton", "OptionButton/colors", "OptionButton/styles", "Resource" ]
 
-[node name="DialogBox" type="Control"]
+[node name="DialogBox" type="Control" index="0"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -481,6 +481,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Margin", "Material", "Mouse", "Rect", "Theme", "Visibility" ]
+goodScene = "res://CutScenes/EndingGood.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 

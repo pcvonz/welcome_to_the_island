@@ -148,150 +148,521 @@
             }
             
         ]
-    },
-    {
-        "npcName": "Willowberry",
-        "Sentences":
-        [
-            {
-                "ID": "ID1",
-                "Sentence": "Stop right there or prepared to be slimed!",
-                "Responses":
-                [ 
-                    {
-                        "Response":"Continue...",
-                        "NextSentence":"ID2"
-                    } 
-                ]
-            },
-            {
-                "ID":"ID2",
-                "Sentence": "What are you doing here?! Who are you?! Why are you on my property?! What are you after?! You know what?! You’ve got 3 seconds! You know what, just get out of here! I’ve got a ber…. Very big saw and I know how to use it!",
-                "Responses":
-                [
-                    {
-                        "Response":"Stand your ground",
-                        "NextSentence":"ID2A"
-                    },
-                    {
-                        "Response":"Back Off",
-                        "NextSentence":"ID2B"
-                    }
-                ]
-            },
-            {
-                "ID":"ID2A",
-                "Sentence":"Whoa! We got a hot shot here! Next time I see you… you know what? There won’t be a next time, you better watch yourself. Hmph!",
-                "Responses":
-                [
-                    {
-                        "Response":"Continue...",
-						"NextSentence": "ID2AA"
-                    }
-                ]
-            },
-			{
-				"ID": "ID2AA",
-				"Sentence": "[Willowberry storms off back into his house. But drops something. Amelie picks it up.]",
-				"Responses":
-				[
-					{
-						"Response": "Continue...",
-						"NextSentence": "ID2AB"
-					}
-				]
-			},
-			{
-				"ID": "ID2AB",
-				"Sentence": "Hand Drill Obtained.",
-				"Responses":
-				[
-					{
-						"Response": "Continue..."
-					}
-				]
-			},
-            {
-                "ID":"ID2B",
-                "Sentence":"[Amelie slowly starts to back off and is about to apologize]",
-                "Responses":
-                [
-                    {
-                        "Response":"Continue...",
-						"NextSentence": "ID2BA"
-                    }
-                ]
-            },
-			{
-				"ID": "ID2BA",
-				"Sentence": "Hah! That’s what I thought! You best watch yourself. I better not see you on my property again.",
-				"Responses":
-				[
-					{
-						"Response": "Continue...",
-						"NextSentence": "ID2BB"
-					}
-				]
-			},
-			{
-				"ID": "ID2BB",
-				"Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
-				"Responses":
-				[
-					{
-						"Response": "Continue...",
-						"NextSentence": "ID2BC"
-					}
-				]
-			},
-			{
-				"ID": "ID2BC",
-				"Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
-				"Responses":
-				[
-					{
-						"Response": "Continue...",
-						"NextSentence": "ID2BD"
-					}
-				]
-			},
-			{
-				"ID": "ID2BD",
-				"Sentence": "She tries carefully to pick it up without triggering the slime trap.",
-				"Responses":
-				[
-					{
-						"Response": "Continue...",
-						"NextSentence": "ID2BE"
-					}
-				]
-			},
-			{
-				"ID": "ID2BE",
-				"Sentence": "Long piece of wood obtained",
-				"Responses":
-				[
-					{
-						"Response": "Continue..."
-					}
-				]
-			}
-        ]
-    },
-    {
-        "npcName": "Gigi-Jay",
-        "Sentences":
-        [
-            {
-                "ID": "ID1",
-                "Sentence": "Meow! Meow! Meow!",
-                "Responses":
-                [ 
-                    {
-                        "Response":"Continue..."
-                    } 
-                ]
-            }
-        ]
-    }
+},
+{
+    "npcName": "Willowberry",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "Stop right there or prepared to be slimed!",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue...",
+                    "NextSentence":"ID2"
+                } 
+            ]
+        },
+        {
+            "ID":"ID2",
+            "Sentence": "What are you doing here?! Who are you?! Why are you on my property?! What are you after?! You know what?! You’ve got 3 seconds! You know what, just get out of here! I’ve got a ber…. Very big saw and I know how to use it!",
+            "Responses":
+            [
+                {
+                    "Response":"Stand your ground",
+                    "NextSentence":"ID2A"
+                },
+                {
+                    "Response":"Back Off",
+                    "NextSentence":"ID2B"
+                }
+            ]
+        },
+        {
+            "ID":"ID2A",
+            "Sentence":"Whoa! We got a hot shot here! Next time I see you… you know what? There won’t be a next time, you better watch yourself. Hmph!",
+            "Responses":
+            [
+                {
+                    "Response":"Continue...",
+                    "NextSentence": "ID2AA"
+                }
+            ]
+        },
+        {
+            "ID": "ID2AA",
+            "Sentence": "[Willowberry storms off back into his house. But drops something. Amelie picks it up.]",
+            "Responses":
+            [
+             {
+              "Response": "Continue...",
+              "NextSentence": "ID2AB"
+          }
+      ]
+        },
+        {
+            "ID": "ID2AB",
+            "Sentence": "Hand Drill Obtained.",
+            "Responses":
+            [
+             {
+              "Response": "Continue..."
+          }
+      ]
+        },
+        {
+            "ID":"ID2B",
+            "Sentence":"[Amelie slowly starts to back off and is about to apologize]",
+            "Responses":
+            [
+                {
+                    "Response":"Continue...",
+                    "NextSentence": "ID2BA"
+                }
+            ]
+        },
+        {
+            "ID": "ID2BA",
+            "Sentence": "Hah! That’s what I thought! You best watch yourself. I better not see you on my property again.",
+            "Responses":
+            [
+             {
+              "Response": "Continue...",
+              "NextSentence": "ID2BB"
+          }
+      ]
+        },
+        {
+            "ID": "ID2BB",
+            "Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
+            "Responses":
+            [
+             {
+              "Response": "Continue...",
+              "NextSentence": "ID2BC"
+          }
+      ]
+        },
+        {
+            "ID": "ID2BC",
+            "Sentence": "[Willowberry walks off with chest puffed up. As he leaves Amelie notices something on the ground behind him.]",
+            "Responses":
+            [
+             {
+              "Response": "Continue...",
+              "NextSentence": "ID2BD"
+          }
+      ]
+        },
+        {
+            "ID": "ID2BD",
+            "Sentence": "She tries carefully to pick it up without triggering the slime trap.",
+            "Responses":
+            [
+             {
+              "Response": "Continue...",
+              "NextSentence": "ID2BE"
+          }
+      ]
+        },
+        {
+            "ID": "ID2BE",
+            "Sentence": "Long piece of wood obtained",
+            "Responses":
+            [
+             {
+              "Response": "Continue..."
+          }
+      ]
+        }
+    ]
+},
+{
+    "npcName": "Moonflight",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID2"
+                }
+            ]
+        },
+        {
+            "ID": "ID2",
+            "Sentence": "[Amelie waves]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID3"
+                }
+            ]
+        },
+        {
+            "ID": "ID3",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID4"
+                }
+            ]
+        },
+        {
+            "ID": "ID4",
+            "Sentence": "[Amelie waves]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID5"
+                }
+            ]
+        },
+        {
+            "ID": "ID5",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID6"
+                }
+            ]
+        },
+        {
+            "ID": "ID6",
+            "Sentence": "[Amelie waves]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID7"
+                }
+            ]
+        },
+        {
+            "ID": "ID7",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID8"
+                }
+            ]
+        },
+        {
+            "ID": "ID8",
+            "Sentence": "[Amelie waves]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID9"
+                }
+            ]
+        },
+        {
+            "ID": "ID9",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID10"
+                }
+            ]
+        },
+        {
+            "ID": "ID10",
+            "Sentence": "[Amelie waves]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID11"
+                }
+            ]
+        },
+        {
+            "ID": "ID11",
+            "Sentence": "Hello...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID12"
+                }
+            ]
+        },
+        {
+            "ID": "ID12",
+            "Sentence": "[Amelie stops waving]",
+            "Responses":
+            [
+                {
+                    "Response": "Talk about the weather",
+                    "NextSentence": "ID30"
+                },
+                {
+                    "Response": "Talk about his house",
+                    "NextSentence": "ID13"
+                }
+            ]
+        },
+        {
+            "ID": "ID13",
+            "Sentence": "Oh yes it’s my pride and joy, took me a long time to... fabricate... ",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID14"
+                }
+            ]
+        },
+        {
+            "ID": "ID14",
+            "Sentence": "HAHAHAHA!",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID15"
+                }
+            ]
+        },
+        {
+            "ID": "ID15",
+            "Sentence": "[Amelie frowns]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID16"
+                }
+            ]
+        },
+        {
+            "ID": "ID16",
+            "Sentence": "Oh please don’t frown it doesn’t...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID17"
+                }
+            ]
+        },
+        {
+            "ID": "ID17",
+            "Sentence": "SUIT YOU!",
+            "Responses":
+            [
+                {
+                    "Response": "continue...",
+                    "NextSentence": "ID18"
+                }
+            ]
+        },
+        {
+            "ID": "ID18",
+            "Sentence": "HAHAHAHAHA",
+            "Responses":
+            [
+                {
+                    "Response": "continue...",
+                    "NextSentence": "ID19"
+                }
+            ]
+        },
+        {
+            "ID": "ID19",
+            "Sentence": "*Face Palm*",
+            "Responses":
+            [
+                {
+                    "Response": "No more...",
+                    "NextSentence": "ID20"
+                }
+            ]
+        },
+        {
+            "ID": "ID20",
+            "Sentence": "So what can I do to enrich the fabric of your life?",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID21"
+                }
+            ]
+        },
+        {
+            "ID": "ID21",
+            "Sentence": "[Amelie asks about how Moonflight prepares for a storm]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID22"
+                }
+            ]
+        },
+        {
+            "ID": "ID22",
+            "Sentence": "Oh yes! I was working on something for the neighbors' what they call Windows",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID23"
+                }
+            ]
+        },
+        {
+            "ID": "ID23",
+            "Sentence": "I have no idea what those are about, I myself like to wait out a storm with a nice Apple",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID24"
+                }
+            ]
+        },
+        {
+            "ID": "ID24",
+            "Sentence": "Anyway, I have an extra one of these, so here you go!",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID25"
+                }
+            ]
+        },
+        {
+            "ID": "ID25",
+            "Sentence": "[Amelie obtains window cover]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID26"
+                }
+            ]
+        },
+        {
+            "ID": "ID26",
+            "Sentence": "I hope that will help you through many storms to come with.... GUSTo!! AHAHAHA!",
+            "Responses":
+            [
+                {
+                    "Response": "LEAVE!"
+                }
+            ]
+        },
+        {
+            "ID": "ID30",
+            "Sentence": "...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID31"
+                }
+            ]
+        },
+        {
+            "ID": "ID31",
+            "Sentence": "...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID32"
+                }
+            ]
+        },
+        {
+            "ID": "ID32",
+            "Sentence": "...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID33"
+                }
+            ]
+        },
+        {
+            "ID": "ID33",
+            "Sentence": "Way to rain in on the small talk...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID34"
+                }
+            ]
+        },
+        {
+            "ID": "ID34",
+            "Sentence": "[Amelie and Moonflight stare at each other blankly]",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID35"
+                }
+            ]
+        },
+        {
+            "ID": "ID35",
+            "Sentence": "Here, you might need this...",
+            "Responses":
+            [
+                {
+                    "Response": "Continue...",
+                    "NextSentence": "ID36"
+                }
+            ]
+        },
+        {
+            "ID": "ID36",
+            "Sentence": "[Amelie obtains a long piece of scratchy cloth]",
+            "Responses":
+            [
+                {
+                    "Response": "Leave"
+                }
+            ]
+        }
+    ]
+},
+{
+    "npcName": "Gigi-Jay",
+    "Sentences":
+    [
+        {
+            "ID": "ID1",
+            "Sentence": "Meow! Meow! Meow!",
+            "Responses":
+            [ 
+                {
+                    "Response":"Continue..."
+                } 
+            ]
+        }
+    ]
+}
 ]
