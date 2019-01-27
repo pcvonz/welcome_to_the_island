@@ -22,11 +22,12 @@ func _ready():
 	
 	night = Color("#84879B")
 	dusk = Color("#CFA876")
-	day = Color (1, 1, 1)
+	day = Color ("#FFFFFF")
 	dawn = Color("#CF8076")
 	storm = Color("#7C00A4")
 	
 	hoursRemaining = 48
+	canvasModulate.color = day
 	resetTimer()
 
 func resetTimer():
@@ -52,6 +53,8 @@ func onTimeoutComplete():
 		canvasModulate.color = night
 	if hoursRemaining == 30 or hoursRemaining == 6:
 		canvasModulate.color = dawn
+	if hoursRemaining == 48 or hoursRemaining == 24:
+		canvasModulate.color = day
 	if hoursRemaining == 3:
 		canvasModulate.color = storm
 	
